@@ -3,9 +3,11 @@
 This is a repository for a Python project analyzing what makes a popular 
 game on the platform Steam. 
 
-## How to Use
+## Summary
 
-
+In this project, we gathered data from Steam using the requests library. We then
+analyzed many different aspects of this data, including price, genre and tags, 
+average reviews, and the number of people who have left reviews.
 
 ## Requirements
 
