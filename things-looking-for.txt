@@ -1,0 +1,1 @@
+Reviews and Rating: <div class="user_reviews_summary_row" onclick="window.location='#app_reviews_hash'" style="cursor: pointer;" data-tooltip-html=
