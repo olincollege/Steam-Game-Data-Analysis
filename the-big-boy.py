@@ -12,29 +12,44 @@ temp_text.close()
 myspan = soup.find_all(
     "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
 )
+
 # Take away all the extra html
+
+review_list = []
 for ele in myspan:
     elem = ele.text.strip()
+    words = elem.split()
+    review_list.append("".join(words))
 
-words = elem.split()
-reviews = "".join(words)
+# Extract the wanted data
 
-# get the percentage of positive reviews
 percentage_list = []
-new_percent = ""
-length = len(reviews)
-for index in range(length):
-    if reviews[index] == "-":
-        i = index + 1
-        while reviews[i + 1] != "%":
-            new_percent += reviews[i]
-            i += 1
-        percentage_list.append(new_percent)
-        new_percent = ""
+num_reviews = []
+LENGTH = len(review_list)
+
+
+for sentence in range(LENGTH):
+    for character in range(len(review_list[sentence])):
+        # get the percentage of positive reviews
+        if review_list[sentence][character] == "-":
+            i = character + 1
+            new_percent = ""
+            while review_list[sentence][i] != "%":
+                new_percent += review_list[sentence][i]
+                i += 1
+            percentage_list.append(new_percent)
+        # get the number of reviews
+        if review_list[sentence][character : character + 3] == "the":
+            j = character + 1
+            new_num = ""
+            while review_list[sentence][j] != "u":
+                new_num += review_list[sentence][j]
+                j += 1
+            num_reviews.append(new_percent)
+
+
 print(percentage_list)
-
-# get the number of reviews
-
+print(num_reviews)
 
 # dataset = {"Counter Strike 2": myspan[0], "Grand Theft Auto": myspan[1]}
 # pd_dataset = pd.DataFrame(dataset)
