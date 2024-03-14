@@ -16,16 +16,15 @@ def get_html_from_mostplayed():
         page.wait_for_timeout(3000)
         html_content = page.content()
         page.close()
-    html_text = open("mostplayed.html", "w")
-    html_text.write(html_content)
-    html_text.close()
+    soup = BeautifulSoup(html_content, "html.parser")
+    return soup
 
-
-def get_game_links():
-    soup = BeautifulSoup(open("mostplayed.html"), "html.parser")
+def get_tbody(soup):
     tbody = soup.find("tbody")
     tbody = str(tbody)
+    return tbody
 
+def get_game_links(tbody):
     get_link = "https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
 
     links = re.findall(get_link, tbody)
@@ -73,13 +72,3 @@ def get_reviews(soup):
                 j += 1
         return percentage, num_reviews
 
-
-# Adding all of our data in a pandas dataframe to analyze
-dataset = {
-    "Counter Strike 2": [get_reviews(CounterStrike_2.html)],
-    "Grand Theft Auto": [get_reviews(Grand_theft_auto_V.html)],
-}
-pd_dataset = pd.DataFrame(dataset)
-pd_dataset.index = ["Percent Positive Reviews", "Number of Reviews"]
-
-print(f"Dataframe: \n {pd_dataset}")

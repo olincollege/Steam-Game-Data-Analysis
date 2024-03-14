@@ -15,21 +15,21 @@ def get_html_from_mostplayed():
         page.wait_for_timeout(3000)
         html_content = page.content()
         page.close()
-    html_text = open("mostplayed.html", "w")
-    html_text.write(html_content)
-    html_text.close()
+    soup = BeautifulSoup(html_content, "html.parser")
+    return soup
 
-def get_game_links():
-    soup = BeautifulSoup(
-        open("mostplayed.html"), "html.parser"
-    )
+def get_tbody(soup):
     tbody = soup.find("tbody")
     tbody = str(tbody)
+    return tbody
 
+def get_game_links(tbody):
     get_link = "https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
 
     links = re.findall(get_link, tbody)
     return links
+
+
 
 def compare_game_genre_players(game):
     """
