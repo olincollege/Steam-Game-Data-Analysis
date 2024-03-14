@@ -27,14 +27,9 @@ temp_text = open("temp_text", "w")
 temp_text.write(soup.get_text())
 temp_text.close()
 
-    myspan = soup.find_all(
-        "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
-    )
-
-    return myspan
-
-
-myspan = get_html_data("steam-game-HTMLs/Grand_Theft_Auto_V.html")
+myspan = soup.find_all(
+    "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
+)
 
 # Take away all the extra html
 
