@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from playwright.sync_api import sync_playwright, Playwright
 
+# Retrieve the links to all the games to be analyzed, from the most played list
 
 with sync_playwright() as pw:
     browser = pw.chromium.launch(headless=False)
@@ -23,16 +24,13 @@ html_text.close()
 soup = BeautifulSoup(
     open("steam-game-HTMLs/Grand_Theft_Auto_V.html"), "html.parser"
 )
-temp_text = open("temp_text", "w")
-temp_text.write(soup.get_text())
-temp_text.close()
 
 myspan = soup.find_all(
     "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
 )
 
 # Take away all the extra html
-
+def get_reviews(soup)
 review_list = []
 for ele in myspan:
     elem = ele.text.strip()
