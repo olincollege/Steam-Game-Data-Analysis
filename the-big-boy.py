@@ -27,9 +27,14 @@ temp_text = open("temp_text", "w")
 temp_text.write(soup.get_text())
 temp_text.close()
 
-myspan = soup.find_all(
-    "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
-)
+    myspan = soup.find_all(
+        "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
+    )
+
+    return myspan
+
+
+myspan = get_html_data("steam-game-HTMLs/Grand_Theft_Auto_V.html")
 
 # Take away all the extra html
 
@@ -39,12 +44,12 @@ for ele in myspan:
     words = elem.split()
     review_list.append("".join(words))
 
+print(f"Review List: {review_list}")
 # Extract the wanted data
 
 percentage_list = []
 num_reviews = []
 LENGTH = len(review_list)
-
 
 for sentence in range(LENGTH):
     for character in range(len(review_list[sentence])):
@@ -57,22 +62,26 @@ for sentence in range(LENGTH):
                 i += 1
             percentage_list.append(new_percent)
         # get the number of reviews
-        if review_list[sentence][character : character + 3] == "the":
-            j = character + 1
+        if review_list[sentence][character : character + 5] == "ofthe":
+            j = character + 5
             new_num = ""
             while review_list[sentence][j] != "u":
                 new_num += review_list[sentence][j]
                 j += 1
-            num_reviews.append(new_percent)
+            num_reviews.append(new_num)
 
+print(f"Percent List: {percentage_list}")
+print(f"Num Reviews: {num_reviews}")
 
-print(percentage_list)
-print(num_reviews)
+# Adding all of our data in a pandas dataframe to analyze
+dataset = {
+    "Counter Strike 2": [percentage_list[0], num_reviews[0]],
+    "Grand Theft Auto": [percentage_list[1], num_reviews[1]],
+}
+pd_dataset = pd.DataFrame(dataset)
+pd_dataset.index = ["Percent Positive Reviews", "Number of Reviews"]
 
-# dataset = {"Counter Strike 2": myspan[0], "Grand Theft Auto": myspan[1]}
-# pd_dataset = pd.DataFrame(dataset)
-
-# print(pd_dataset)
+print(f"Dataframe: \n {pd_dataset}")
 
 """r = requests.get("https://store.steampowered.com/charts/mostplayed").content
 test_text = open("steam-game-HTMLs/mostplayed", "wb")

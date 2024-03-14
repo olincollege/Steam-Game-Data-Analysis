@@ -39,7 +39,7 @@ def compare_game_genre_players(game):
         game: An string representing the name of a game to analyze.
 
     Returns:
-        A list with frist value being an int of the number people who
+        A list with first value being an int of the number people who
         have left reviews, and the second value being a string of the game tag
     """
     pass
@@ -88,21 +88,19 @@ def compare_price_num_players(game):
     pass
 
 
-def compile_game_data(path, func):
+def compile_game_data(data, func):
     """
     Combines data from many games together to be analyzed/compared against
     each other
 
     Args:
-        path: A string representing the file path that contains the games to
-        analyze
+        data: A Pandas dataframe containing all of the games to be analyzed
 
     Returns:
         A list of each functions dict that is a combination of all the dicts
         for that comparison
     """
-    # loop thru a range of ints with each int representing a function to run
-    # combine the dicts for those
-    # create a dict with title of each comparison as key and the values as
-    # list datapoints
+    # loop thru the first column of the data frame which has all the game titles
+    # run the helper functions for each game
+    # compile each category into one list and visualize
     pass
