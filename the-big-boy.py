@@ -63,19 +63,6 @@ for sentence in range(LENGTH):
                 j += 1
             num_reviews.append(new_num)
 
-print(f"Percent List: {percentage_list}")
-print(f"Num Reviews: {num_reviews}")
-
-# Adding all of our data in a pandas dataframe to analyze
-dataset = {
-    "Counter Strike 2": [percentage_list[0], num_reviews[0]],
-    "Grand Theft Auto": [percentage_list[1], num_reviews[1]],
-}
-pd_dataset = pd.DataFrame(dataset)
-pd_dataset.index = ["Percent Positive Reviews", "Number of Reviews"]
-
-print(f"Dataframe: \n {pd_dataset}")
-
 """r = requests.get("https://store.steampowered.com/charts/mostplayed").content
 test_text = open("steam-game-HTMLs/mostplayed", "wb")
 test_text.write(r)
