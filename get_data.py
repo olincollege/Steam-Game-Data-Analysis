@@ -70,5 +70,5 @@ def get_reviews(soup):
             while review[j] != "u":
                 num_reviews += review[j]
                 j += 1
-        return percentage, num_reviews
+    return percentage, num_reviews
 
