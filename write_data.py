@@ -14,16 +14,36 @@ tbody = get_data.get_tbody(mostplayed_html)
 
 links = get_data.get_game_links(tbody)
 
-
 html = requests.get(links[0]).content
 soup = BeautifulSoup(html, "html.parser")
 
+test_link_list = links[0:3]
 
-# Adding all of our data in a pandas dataframe to analyze
-dataset = {
-    "Counter Strike 2": [get_data.get_reviews(soup)],
+# for link in range(len(test_link_list)):
+
+
+# make a dataframe, to be updated
+dataframe_titles = {
+    "Game Name": [],
+    "Percent Positive Reviews": [],
+    "Number of Reviews": [],
+    "Genre": [],
+    "Price": [],
+    "Peak Number of Players": [],
 }
-pd_dataset = pd.DataFrame(dataset)
-pd_dataset.index = ["Percent Positive Reviews", "Number of Reviews"]
 
-print(f"Dataframe: \n {pd_dataset}")
+df = pd.DataFrame(dataframe_titles)
+
+# Adding all of our data into the dataframe
+percent, num = get_data.get_reviews(soup)
+df.loc[0] = {
+    "Game Name": "Counter Strike 2",
+    "Percent Positive Reviews": percent,
+    "Number of Reviews": num,
+    "Genre": "Genre Insert",
+    "Price": "price insert",
+    "Peak Number of Players": "peak insert",
+}
+
+df.to_csv("steam_data.csv", sep="\t")
+print(f"Dataframe: \n {df}")

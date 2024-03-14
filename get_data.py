@@ -19,10 +19,12 @@ def get_html_from_mostplayed():
     soup = BeautifulSoup(html_content, "html.parser")
     return soup
 
+
 def get_tbody(soup):
     tbody = soup.find("tbody")
     tbody = str(tbody)
     return tbody
+
 
 def get_game_links(tbody):
     get_link = "https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
