@@ -1,6 +1,7 @@
 import pandas as pd
 from playwright.sync_api import sync_playwright, Playwright
-import re 
+import re
+
 
 def compare_game_genre_players(game):
     """
