@@ -1,7 +1,4 @@
 import pandas as pd
-from write_data import df
-
-print(df)
 
 
 def compare_game_genre_players(game):

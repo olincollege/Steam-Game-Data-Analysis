@@ -33,6 +33,20 @@ def get_game_links(tbody):
     return links
 
 
+def get_name(link):
+    """
+    Find the name of a game based on its link from the most played list
+
+    Args:
+        link: A string representing the link path to the game
+
+    Returns:
+        A string representing the name of the game
+    """
+    name = link[link.rindex("/") + 1 : -1]
+    return name
+
+
 def get_reviews(soup):
     """
     Find the reviews and ratings of a game.
@@ -44,6 +58,8 @@ def get_reviews(soup):
     Returns:
         A string representing the games reviews, extracted from the html
     """
+
+    # Find the reviews in the html
     myspan = soup.find_all(
         "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
     )
@@ -57,20 +73,66 @@ def get_reviews(soup):
 
     percentage = ""
     num_reviews = ""
-    LENGTH = len(review)
 
-    for character in range(LENGTH):
-        # get the percentage of positive reviews
-        if review[character] == "-":
-            i = character + 1
-            while review[i] != "%":
-                percentage += review[i]
-                i += 1
-            # get the number of reviews
-        if review[character : character + 5] == "ofthe":
-            j = character + 5
-            while review[j] != "u":
-                num_reviews += review[j]
-                j += 1
-        # add to the existing data frame with 2 new rows
+    # get the percentage of positive reviews
+    if review.find("-") != -1:
+        i = review.find("-") + 1
+        while review[i] != "%":
+            percentage += review[i]
+            i += 1
+        # get the number of reviews
+    if review.find("ofthe") != -1:
+        j = review.find("ofthe") + 5
+        while j < review.find("userreviews"):
+            num_reviews += review[j]
+            j += 1
+
     return percentage, num_reviews
+
+
+def get_game_genre(soup):
+    """
+    Finds the 3 most relevant tags of a game.
+
+    Args:
+        soup: A beautiful soup object containing all of the html info
+        of a game
+
+    Returns:
+        A string representing the game's 3 most popular genres,
+        extracted from the html
+    """
+    mydiv = soup.find_all(
+        "div",
+        {
+            "class": "popup_menu_subheader popup_genre_expand_header responsive_hidden"
+        },
+    )
+    genres = ""
+    word_list = []
+    for ele in mydiv:
+        elem = ele.text
+        words = elem.split()
+        word_list += words
+        genres = "".join(words)
+        print(word_list)
+    genres = 
+    return genres
+
+
+link = "https://store.steampowered.com/app/899770/Last_Epoch/"
+html = requests.get(link).content
+soup = BeautifulSoup(html, "html.parser")
+# Testing zone
+genre = get_game_genre(soup)
+percent, num = get_reviews(soup)
+name = get_name(link)
+print(name, percent, num, genre)
+# df.loc[links.index(links[10])] = {
+#     "Game Name": name,
+#     "Percent Positive Reviews": percent,
+#     "Number of Reviews": num,
+#     "Genre": "Genre Insert",
+#     "Price": "price insert",
+#     "Peak Number of Players": "peak insert",
+# }
