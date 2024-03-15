@@ -33,6 +33,7 @@ def get_game_links(tbody):
     return links
 
 
+
 def get_reviews(soup):
     """
     Find the reviews and ratings of a game.

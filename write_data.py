@@ -17,7 +17,7 @@ links = get_data.get_game_links(tbody)
 html = requests.get(links[0]).content
 soup = BeautifulSoup(html, "html.parser")
 
-test_link_list = links[0:3]
+"""test_link_list = links[0:3]
 
 # for link in range(len(test_link_list)):
 
@@ -47,3 +47,4 @@ df.loc[0] = {
 
 df.to_csv("steam_data.csv", sep="\t")
 print(f"Dataframe: \n {df}")
+"""
