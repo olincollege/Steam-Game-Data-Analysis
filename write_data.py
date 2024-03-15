@@ -14,61 +14,64 @@ tbody = get_data.get_tbody(mostplayed_html)
 
 links = get_data.get_game_links(tbody)
 
-html = requests.get(links[0]).content
-soup = BeautifulSoup(html, "html.parser")
-
-"""test_link_list = links[0:3]
-
-# for link in range(len(test_link_list)):
-
+prices, peak_players = get_data.get_price_and_peak(tbody)
 
 # make a dataframe, to be updated
 dataframe_titles = {
     "Game Name": [],
     "Percent Positive Reviews": [],
     "Number of Reviews": [],
-    "Genre": [],
+    "First Genre": [],
+    "Second Genre": [],
+    "Third Genre":[],
     "Price": [],
     "Peak Number of Players": [],
 }
 
 df = pd.DataFrame(dataframe_titles)
 
-test_link_list = links[0:3]
-
-# for link in links:
-#     html = requests.get(link).content
-#     soup = BeautifulSoup(html, "html.parser")
-#     # Adding all of our data into the dataframe
-#     percent, num = get_data.get_reviews(soup)
-#     name = get_data.get_name(link)
-#     df.loc[links.index(link)] = {
-#         "Game Name": name,
-#         "Percent Positive Reviews": percent,
-#         "Number of Reviews": num,
-#         "Genre": "Genre Insert",
-#         "Price": "price insert",
-#         "Peak Number of Players": "peak insert",
-#     }
-#     print("hey")
-#     time.sleep(5)
-
-html = requests.get(links[10]).content
-soup = BeautifulSoup(html, "html.parser")
-# Adding all of our data into the dataframe
-genre = get_data.get_game_genre(soup)
-print(genre)
-percent, num = get_data.get_reviews(soup)
-name = get_data.get_name(links[10])
-df.loc[links.index(links[10])] = {
-    "Game Name": name,
-    "Percent Positive Reviews": percent,
-    "Number of Reviews": num,
-    "Genre": genre,
-    "Price": "price insert",
-    "Peak Number of Players": "peak insert",
-}
-
+count = 0
+for link in links:
+    if prices[count] != -1:
+        html = requests.get(link).content
+        soup = BeautifulSoup(html, "html.parser")
+        # Adding all of our data into the dataframe
+        name = get_data.get_name(link)
+        percent, num = get_data.get_reviews(soup)
+        genre = get_data.get_game_genre(soup)
+        df.loc[links.index(link)] = {
+            "Game Name": name,
+            "Percent Positive Reviews": percent,
+            "Number of Reviews": num,
+            "First Genre": genre[0],
+            "Second Genre": genre[1],
+            "Third Genre": genre[2],
+            "Price": prices[count],
+            "Peak Number of Players": peak_players[count],
+        }
+    
+    print(count)
+    count += 1
+    time.sleep(5)
 df.to_csv("steam_data.csv", sep="\t")
-print(f"Dataframe: \n {df}")
-"""
+
+
+# html = requests.get(links[10]).content
+# soup = BeautifulSoup(html, "html.parser")
+# # Adding all of our data into the dataframe
+# genre = get_data.get_game_genre(soup)
+# print(genre)
+# percent, num = get_data.get_reviews(soup)
+# name = get_data.get_name(links[10])
+# df.loc[links.index(links[10])] = {
+#     "Game Name": name,
+#     "Percent Positive Reviews": percent,
+#     "Number of Reviews": num,
+#     "Genre": genre[0],
+#     "Price": "price insert",
+#     "Peak Number of Players": "peak insert",
+# }
+
+# df.to_csv("steam_data.csv", sep="\t")
+# print(f"Dataframe: \n {df}")
+
