@@ -54,7 +54,7 @@ for link in links:
         index += 1
     count += 1
     time.sleep(5)
-df.to_csv("steam_data.csv", sep="\t")
+df.to_csv("steam_data.csv")
 
 
 # html = requests.get(links[10]).content

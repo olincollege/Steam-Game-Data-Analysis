@@ -1,98 +1,98 @@
-	Game Name	Percent Positive Reviews	Number of Reviews	First Genre	Second Genre	Third Genre	Price	Peak Number of Players
-0	CounterStrike_2	87	7,945,829	FPS	Shooter	Multiplayer	0.0	1474990
-1	Dota_2	81	2,194,585	Free to Play	MOBA	Multiplayer	0.0	661835
-2	PUBG_BATTLEGROUNDS	58	2,323,463	Survival	Shooter	Battle Royale	0.0	674298
-3	Apex_Legends	78	803,981	Free to Play	Battle Royale	Multiplayer	0.0	434299
-4	NARAKA_BLADEPOINT	75	208,275	Battle Royale	Multiplayer	Martial Arts	0.0	289971
-5	HELLDIVERS_2	82	225,552	Online Co-Op	Action	Multiplayer	39.99	347410
-6	Grand_Theft_Auto_V	87	1,604,061	Open World	Action	Multiplayer	39.98	165827
-7	Palworld	94	243,563	Multiplayer	Open World	Survival	29.99	124582
-8	Rust	87	852,975	Survival	Crafting	Multiplayer	39.99	117408
-9	Wallpaper_Engine	98	701,021	Mature	Utilities	Software	3.99	115138
-10	Monster_Hunter_World	88	256,502	Co-op	Multiplayer	Action	29.99	109379
-11	Last_Epoch	77	77,340	Action RPG	Loot	Hack and Slash	34.99	101713
-12	War_Thunder	75	469,108	Free to Play	Vehicular Combat	Combat	0.0	89073
-13	Tom_Clancys_Rainbow_Six_Siege	85	1,055,818	FPS	PvP	eSports	19.99	148674
-14	ELDEN_RING	92	587,595	Souls-like	Dark Fantasy	Open World	59.99	81480
-15	Baldurs_Gate_3	96	518,271	RPG	Choices Matter	Story Rich	59.99	100850
-16	Granblue_Fantasy_Relink	90	26,657	Anime	Action	Action RPG	59.99	78271
-17	Sid_Meiers_Civilization_VI	86	218,773	Strategy	Turn-Based Strategy	Multiplayer	59.99	62971
-18	Football_Manager_2024	88	5,887	Simulation	Sports	Strategy	59.99	66249
-19	Unturned	91	535,815	Free to Play	Survival	Zombies	0.0	60277
-20	Warframe	87	567,109	Free to Play	Action RPG	Looter Shooter	0.0	59789
-21	Dead_by_Daylight	80	515,035	Horror	Survival Horror	Multiplayer	19.99	57919
-22	Team_Fortress_2	93	1,034,512	Free to Play	Hero Shooter	Multiplayer	0.0	60696
-23	Crab_Game	91	150,357	Psychological Horror	Multiplayer	Free to Play	0.0	64869
-24	Stardew_Valley	98	558,009	Farming Sim	Life Sim	Pixel Graphics	14.99	55089
-25	Hearts_of_Iron_IV	91	198,540	Strategy	World War II	Grand Strategy	39.99	53992
-26	EA_SPORTS_FC_24	55	43,891	Football (Soccer)	Sports	Controller	69.99	52106
-27	Dont_Starve_Together	95	302,159	Survival	Open World Survival Craft	Multiplayer	14.99	52216
-28	Left_4_Dead_2	97	628,169	Zombies	Co-op	FPS	9.99	48871
-29	Lethal_Company	97	291,681	Online Co-Op	Horror	First-Person	9.99	47490
-30	Destiny_2	80	586,099	Free to Play	Open World	FPS	0.0	44628
-31	Supermarket_Simulator	94	11,484	Simulation	Economy	Management	12.99	47806
-32	Battlefield_V	71	171,805	FPS	Multiplayer	World War II	49.99	47707
-33	DayZ	76	317,652	Survival	Multiplayer	Zombies	44.99	52487
-34	Red_Dead_Redemption_2	91	503,741	Open World	Story Rich	Western	59.99	41855
-35	Overwatch_2	17	249,166	Hero Shooter	Free to Play	FPS	0.0	40525
-36	THE_FINALS	75	146,155	Multiplayer	Shooter	Free to Play	0.0	48519
-37	Terraria	97	1,004,923	Open World Survival Craft	Sandbox	Survival	9.99	37118
-38	YuGiOh_Master_Duel	75	70,677	Card Game	Free to Play	Strategy	0.0	37554
-39	Euro_Truck_Simulator_2	97	550,271	Driving	Transportation	Simulation	19.99	36610
-40	Lost_Ark	71	198,501	MMORPG	Free to Play	Action RPG	0.0	35311
-41	Cyberpunk_2077	82	637,528	Cyberpunk	Open World	Nudity	59.99	33848
-42	Backpack_Battles	95	3,551	Early Access	Auto Battler	Strategy	12.99	34604
-43	tModLoader	97	237,570	Adventure	Free to Play	Action	0.0	32980
-44	The_Sims_4	87	129,926	Life Sim	Character Customization	Building	0.0	32729
-45	7_Days_to_Die	88	208,153	Early Access	Survival	Zombies	24.99	32665
-46	Balatro	97	17,447	Roguelike Deckbuilder	Card Game	Deckbuilding	14.99	32469
-47	Myth_of_Empires	73	10,099	Building	Open World Survival Craft	Sandbox	39.99	32158
-48	Hunt_Showdown	82	153,130	Open World	Extraction Shooter	Atmospheric	39.99	30434
-49	Forza_Horizon_5	88	153,813	Racing	Open World	Driving	59.99	29425
-50	Mount__Blade_II_Bannerlord	88	186,746	Medieval	Strategy	Open World	49.99	28633
-51	ARK_Survival_Evolved	83	513,367	Open World Survival Craft	Survival	Multiplayer	14.99	28616
-52	Heros_Land	57	33,499	Survival	Open World	Free to Play	0.0	31713
-53	Governor_of_Poker_3	70	14,508	Gambling	Card Game	Free to Play	0.0	28019
-54	Project_Zomboid	94	214,000	Survival	Zombies	Open World	19.99	27328
-55	MONSTER_HUNTER_RISE	81	59,179	Action	RPG	Online Co-Op	39.99	26792
-56	Garrys_Mod	96	903,314	Sandbox	Moddable	Multiplayer	9.99	29107
-57	Street_Fighter_6	86	22,584	2D Fighter	Fighting	Character Customization	59.99	25376
-58	MIR4	65	13,956	PvE	PvP	MMORPG	0.0	25102
-59	The_Binding_of_Isaac_Rebirth	97	252,237	Action Roguelike	Roguelike	Indie	14.99	24622
-60	Total_War_WARHAMMER_III	61	67,965	Strategy	Turn-Based Strategy	Grand Strategy	59.99	24416
-61	NBA_2K24	24	19,299	Sports	Basketball	Simulation	59.99	24432
-62	Age_of_Empires_II_Definitive_Edition	94	123,839	Strategy	RTS	City Builder	19.99	24196
-63	VRChat	74	213,099	VR	Free to Play	Multiplayer	0.0	29131
-64	Sons_Of_The_Forest	86	164,667	Survival	Open World	Multiplayer	29.99	23820
-65	RimWorld	98	151,804	Colony Sim	Base Building	Survival	34.99	23413
-66	Farming_Simulator_22	92	48,349	Simulation	Farming Sim	Co-op	29.99	33586
-67	Valheim	94	378,849	Open World Survival Craft	Survival	Online Co-Op	19.99	26461
-68	Crusader_Kings_III	91	67,788	Strategy	Simulation	Medieval	49.99	23154
-69	Deep_Rock_Galactic	97	223,357	Dwarf	Co-op	PvE	29.99	21782
-70	Goose_Goose_Duck	87	59,887	Free to Play	Multiplayer	PvP	0.0	21552
-71	Battlefield_2042	45	192,394	FPS	Shooter	Military	59.99	20539
-72	Black_Desert	76	53,611	MMORPG	Massively Multiplayer	Open World	9.99	22002
-73	SCUM	75	80,701	Survival	Open World Survival Craft	Multiplayer	39.99	19915
-74	The_Elder_Scrolls_V_Skyrim_Special_Edition	93	156,089	Open World	RPG	Adventure	39.99	22582
-75	Slay_the_Spire	97	129,013	Roguelike Deckbuilder	Card Game	Card Battler	24.99	19254
-76	TEKKEN_8	87	13,737	Fighting	Action	3D Fighter	69.99	18986
-77	The_Forest	95	450,878	Open World Survival Craft	Survival	Open World	19.99	19106
-78	Geometry_Dash	93	311,292	Difficult	Music	Level Editor	3.99	21581
-79	Enshrouded	86	38,305	Open World	Survival	Base Building	29.99	20876
-80	Russian_Fishing_4	48	59,775	Fishing	Free to Play	Simulation	0.0	19183
-81	PAYDAY_2	89	425,342	Co-op	Action	FPS	9.99	28984
-82	Europa_Universalis_IV	86	84,370	Grand Strategy	Strategy	Historical	39.99	17759
-83	The_Witcher_3_Wild_Hunt	96	698,522	Open World	RPG	Story Rich	39.99	17674
-84	Forza_Horizon_4	89	196,247	Racing	Open World	Driving	59.99	17439
-85	Eternal_Return	78	55,087	Free to Play	Anime	MOBA	0.0	17249
-86	Age_of_Empires_IV_Anniversary_Edition	87	48,988	Strategy	RTS	Base Building	39.99	17020
-87	Battlefield_1	86	122,433	FPS	Multiplayer	World War I	39.99	17917
-88	FINAL_FANTASY_XIV_Online	88	66,030	MMORPG	RPG	Massively Multiplayer	19.99	25838
-89	Crosshair_X	92	13,377	Action	Utilities	Shooter	7.99	18398
-90	Sid_Meiers_Civilization_V	96	119,387	Turn-Based Strategy	Strategy	Turn-Based	29.99	17353
-91	Squad	83	125,116	Military	Realistic	FPS	49.99	15850
-92	Soundpad	96	61,637	Utilities	Audio Production	Music	4.99	17163
-93	BeamNGdrive	97	215,316	Simulation	Driving	Realistic	24.99	17956
-94	World_of_Tanks_Blitz	79	137,991	Tanks	Free to Play	Shooter	0.0	15182
-95	Fallout_4	83	215,617	Open World	Post-apocalyptic	Singleplayer	19.99	16917
-96	Stellaris	88	113,624	Space	Grand Strategy	Strategy	39.99	14971
+,Game Name,Percent Positive Reviews,Number of Reviews,First Genre,Second Genre,Third Genre,Price,Peak Number of Players
+0,CounterStrike_2,87,"7,945,829",FPS,Shooter,Multiplayer,0.0,1474990
+1,Dota_2,81,"2,194,585",Free to Play,MOBA,Multiplayer,0.0,662506
+2,PUBG_BATTLEGROUNDS,58,"2,323,525",Survival,Shooter,Battle Royale,0.0,674298
+3,Apex_Legends,78,"804,021",Free to Play,Battle Royale,Multiplayer,0.0,434299
+4,NARAKA_BLADEPOINT,75,"208,294",Battle Royale,Multiplayer,Martial Arts,0.0,289971
+5,HELLDIVERS_2,82,"225,663",Online Co-Op,Action,Multiplayer,39.99,347410
+6,Grand_Theft_Auto_V,87,"1,604,130",Open World,Action,Multiplayer,39.98,165827
+7,Palworld,94,"243,601",Multiplayer,Open World,Survival,29.99,124582
+8,Rust,87,"852,994",Survival,Crafting,Multiplayer,39.99,117408
+9,Wallpaper_Engine,98,"701,044",Mature,Utilities,Software,3.99,115138
+10,Monster_Hunter_World,88,"256,510",Co-op,Multiplayer,Action,29.99,109379
+11,Tom_Clancys_Rainbow_Six_Siege,85,"1,055,843",FPS,PvP,eSports,19.99,148674
+12,Last_Epoch,77,"77,340",Action RPG,Loot,Hack and Slash,34.99,101713
+13,War_Thunder,75,"469,108",Free to Play,Vehicular Combat,Combat,0.0,89073
+14,Baldurs_Gate_3,96,"518,292",RPG,Choices Matter,Story Rich,59.99,100850
+15,ELDEN_RING,92,"587,616",Souls-like,Dark Fantasy,Open World,59.99,81480
+16,Granblue_Fantasy_Relink,90,"26,657",Anime,Action,Action RPG,59.99,73148
+17,Sid_Meiers_Civilization_VI,86,"218,779",Strategy,Turn-Based Strategy,Multiplayer,59.99,62971
+18,Football_Manager_2024,88,"5,887",Simulation,Sports,Strategy,59.99,66249
+19,Warframe,87,"567,118",Free to Play,Action RPG,Looter Shooter,0.0,59833
+20,Unturned,91,"535,815",Free to Play,Survival,Zombies,0.0,60277
+21,Dead_by_Daylight,80,"515,035",Horror,Survival Horror,Multiplayer,19.99,57919
+22,Team_Fortress_2,93,"1,034,512",Free to Play,Hero Shooter,Multiplayer,0.0,60696
+23,Crab_Game,91,"150,357",Psychological Horror,Multiplayer,Free to Play,0.0,64869
+24,Hearts_of_Iron_IV,91,"198,561",Strategy,World War II,Grand Strategy,39.99,53992
+25,Stardew_Valley,98,"558,009",Farming Sim,Life Sim,Pixel Graphics,14.99,55089
+26,EA_SPORTS_FC_24,55,"43,912",Football (Soccer),Sports,Controller,69.99,52106
+27,Dont_Starve_Together,95,"302,163",Survival,Open World Survival Craft,Multiplayer,14.99,52216
+28,Left_4_Dead_2,97,"628,169",Zombies,Co-op,FPS,9.99,48871
+29,Lethal_Company,97,"291,681",Online Co-Op,Horror,First-Person,9.99,47490
+30,Destiny_2,80,"586,103",Free to Play,Open World,FPS,0.0,44628
+31,DayZ,76,"317,652",Survival,Multiplayer,Zombies,44.99,52487
+32,Supermarket_Simulator,94,"11,484",Simulation,Economy,Management,12.99,47806
+33,Red_Dead_Redemption_2,91,"503,767",Open World,Story Rich,Western,59.99,41855
+34,Battlefield_V,71,"171,823",FPS,Multiplayer,World War II,49.99,47707
+35,Overwatch_2,17,"249,166",Hero Shooter,Free to Play,FPS,0.0,40525
+36,Terraria,97,"1,004,923",Open World Survival Craft,Sandbox,Survival,9.99,38412
+37,THE_FINALS,75,"146,193",Multiplayer,Shooter,Free to Play,0.0,48519
+38,YuGiOh_Master_Duel,75,"70,676",Card Game,Free to Play,Strategy,0.0,37554
+39,Euro_Truck_Simulator_2,97,"550,271",Driving,Transportation,Simulation,19.99,36610
+40,Lost_Ark,71,"198,502",MMORPG,Free to Play,Action RPG,0.0,35311
+41,Cyberpunk_2077,82,"637,534",Cyberpunk,Open World,Nudity,59.99,33848
+42,The_Sims_4,87,"129,932",Life Sim,Character Customization,Building,0.0,32827
+43,Backpack_Battles,95,"3,568",Early Access,Auto Battler,Strategy,12.99,33520
+44,Balatro,97,"17,447",Roguelike Deckbuilder,Card Game,Deckbuilding,14.99,32670
+45,Myth_of_Empires,73,"10,099",Building,Open World Survival Craft,Sandbox,39.99,32158
+46,7_Days_to_Die,88,"208,153",Early Access,Survival,Zombies,24.99,32665
+47,tModLoader,97,"237,579",Adventure,Free to Play,Action,0.0,32980
+48,Hunt_Showdown,82,"153,137",Open World,Extraction Shooter,Atmospheric,39.99,30434
+49,ARK_Survival_Evolved,83,"513,367",Open World Survival Craft,Survival,Multiplayer,14.99,28740
+50,Mount__Blade_II_Bannerlord,88,"186,750",Medieval,Strategy,Open World,49.99,28633
+51,Governor_of_Poker_3,70,"14,508",Gambling,Card Game,Free to Play,0.0,28019
+52,Forza_Horizon_5,88,"153,832",Racing,Open World,Driving,59.99,29425
+53,Project_Zomboid,94,"214,005",Survival,Zombies,Open World,19.99,27480
+54,Heros_Land,57,"33,499",Survival,Open World,Free to Play,0.0,31713
+55,Garrys_Mod,96,"903,328",Sandbox,Moddable,Multiplayer,9.99,29107
+56,MONSTER_HUNTER_RISE,81,"59,187",Action,RPG,Online Co-Op,39.99,26792
+57,MIR4,65,"13,956",PvE,PvP,MMORPG,0.0,25040
+58,Total_War_WARHAMMER_III,61,"67,967",Strategy,Turn-Based Strategy,Grand Strategy,59.99,24500
+59,Age_of_Empires_II_Definitive_Edition,94,"123,844",Strategy,RTS,City Builder,19.99,24287
+60,Street_Fighter_6,86,"22,584",2D Fighter,Fighting,Character Customization,59.99,25376
+61,The_Binding_of_Isaac_Rebirth,97,"252,248",Action Roguelike,Roguelike,Indie,14.99,24622
+62,VRChat,74,"213,099",VR,Free to Play,Multiplayer,0.0,29131
+63,NBA_2K24,24,"19,299",Sports,Basketball,Simulation,59.99,24432
+64,Sons_Of_The_Forest,86,"164,667",Survival,Open World,Multiplayer,29.99,23820
+65,Farming_Simulator_22,92,"48,352",Simulation,Farming Sim,Co-op,29.99,33586
+66,RimWorld,98,"151,807",Colony Sim,Base Building,Survival,34.99,23515
+67,Valheim,94,"378,849",Open World Survival Craft,Survival,Online Co-Op,19.99,26461
+68,Crusader_Kings_III,91,"67,792",Strategy,Simulation,Medieval,49.99,23154
+69,Deep_Rock_Galactic,97,"223,363",Dwarf,Co-op,PvE,29.99,21782
+70,Black_Desert,76,"53,611",MMORPG,Massively Multiplayer,Open World,9.99,22002
+71,Goose_Goose_Duck,87,"59,887",Free to Play,Multiplayer,PvP,0.0,21552
+72,The_Elder_Scrolls_V_Skyrim_Special_Edition,93,"156,091",Open World,RPG,Adventure,39.99,22582
+73,SCUM,75,"80,701",Survival,Open World Survival Craft,Multiplayer,39.99,19915
+74,Geometry_Dash,93,"311,292",Difficult,Music,Level Editor,3.99,21581
+75,Enshrouded,86,"38,312",Open World,Survival,Base Building,29.99,20876
+76,Battlefield_2042,45,"192,394",FPS,Shooter,Military,59.99,20539
+77,TEKKEN_8,87,"13,746",Fighting,Action,3D Fighter,69.99,18986
+78,Slay_the_Spire,97,"129,013",Roguelike Deckbuilder,Card Game,Card Battler,24.99,19254
+79,Russian_Fishing_4,48,"59,775",Fishing,Free to Play,Simulation,0.0,19183
+80,PAYDAY_2,89,"425,345",Co-op,Action,FPS,9.99,28984
+81,Europa_Universalis_IV,86,"84,370",Grand Strategy,Strategy,Historical,39.99,17759
+82,The_Forest,95,"450,878",Open World Survival Craft,Survival,Open World,19.99,19106
+83,FINAL_FANTASY_XIV_Online,88,"66,030",MMORPG,RPG,Massively Multiplayer,19.99,25838
+84,The_Witcher_3_Wild_Hunt,96,"698,522",Open World,RPG,Story Rich,39.99,17674
+85,Eternal_Return,78,"55,087",Free to Play,Anime,MOBA,0.0,17249
+86,Age_of_Empires_IV_Anniversary_Edition,87,"48,988",Strategy,RTS,Base Building,39.99,17020
+87,Crosshair_X,92,"13,379",Action,Utilities,Shooter,7.99,18398
+88,Sid_Meiers_Civilization_V,96,"119,387",Turn-Based Strategy,Strategy,Turn-Based,29.99,17353
+89,Forza_Horizon_4,89,"196,256",Racing,Open World,Driving,59.99,17439
+90,BeamNGdrive,97,"215,324",Simulation,Driving,Realistic,24.99,17956
+91,Soundpad,96,"61,637",Utilities,Audio Production,Music,4.99,17163
+92,Squad,83,"125,110",Military,Realistic,FPS,49.99,15850
+93,Fallout_4,83,"215,614",Open World,Post-apocalyptic,Singleplayer,19.99,16917
+94,World_of_Tanks_Blitz,79,"137,993",Tanks,Free to Play,Shooter,0.0,15236
+95,Battlefield_1,86,"122,433",FPS,Multiplayer,World War I,39.99,17917
+96,Stellaris,88,"113,624",Space,Grand Strategy,Strategy,39.99,14971
