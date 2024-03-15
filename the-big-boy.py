@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from playwright.sync_api import sync_playwright, Playwright
 
-# Retrieve the links to all the games to be analyzed, from the most played list
 
 with sync_playwright() as pw:
     browser = pw.chromium.launch(headless=False)
@@ -24,13 +23,16 @@ html_text.close()
 soup = BeautifulSoup(
     open("steam-game-HTMLs/Grand_Theft_Auto_V.html"), "html.parser"
 )
+temp_text = open("temp_text", "w")
+temp_text.write(soup.get_text())
+temp_text.close()
 
 myspan = soup.find_all(
     "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
 )
 
 # Take away all the extra html
-def get_reviews(soup)
+
 review_list = []
 for ele in myspan:
     elem = ele.text.strip()
@@ -62,6 +64,19 @@ for sentence in range(LENGTH):
                 new_num += review_list[sentence][j]
                 j += 1
             num_reviews.append(new_num)
+
+print(f"Percent List: {percentage_list}")
+print(f"Num Reviews: {num_reviews}")
+
+# Adding all of our data in a pandas dataframe to analyze
+dataset = {
+    "Counter Strike 2": [percentage_list[0], num_reviews[0]],
+    "Grand Theft Auto": [percentage_list[1], num_reviews[1]],
+}
+pd_dataset = pd.DataFrame(dataset)
+pd_dataset.index = ["Percent Positive Reviews", "Number of Reviews"]
+
+print(f"Dataframe: \n {pd_dataset}")
 
 """r = requests.get("https://store.steampowered.com/charts/mostplayed").content
 test_text = open("steam-game-HTMLs/mostplayed", "wb")
