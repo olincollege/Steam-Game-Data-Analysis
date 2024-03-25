@@ -124,8 +124,6 @@ def get_price_and_peak(tbody):
             peak_players.append(-1)
             continue
         # Cut out part of section already searched
-
-        section = section[partition::]
         partition = section.rfind("</td")
         section = section[:partition]
         partition = section.rfind(">")
