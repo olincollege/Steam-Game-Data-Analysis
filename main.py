@@ -21,6 +21,8 @@ top_ten_most_positive_reviews, top_ten_most_positive_reviews_popularity = analyz
 top_ten_most_negatively_reviewed, top_ten_most_negatively_reviewed_popularity = analyze_data.top_ten_most_negatively_reviewed(game_name, percent_positive, peak_players)
 top_ten_most_negative_reviews, top_ten_most_negative_reviews_popularity = analyze_data.top_ten_most_negative_negative_reviews(game_name, number_of_negative_reviews, peak_players)
 
+price_points, price_points_popularity = analyze_data.number_playing_priced_games(price, peak_players)
+
 genre_most_popular, genre_most_popular_popularity = analyze_data.most_popular_genres(first_genre, second_genre, third_genre, peak_players)
 
 plt.bar(top_ten_most_positively_reviewed, top_ten_most_positively_reviewed_popularity, color ='maroon', 
@@ -39,6 +41,11 @@ plt.xticks(rotation = 30)
 plt.show()
 
 plt.bar(top_ten_most_negative_reviews, top_ten_most_negative_reviews_popularity, color ='maroon', 
+        width = 0.4)
+plt.xticks(rotation = 30)
+plt.show()
+
+plt.bar(price_points, price_points_popularity, color ='maroon', 
         width = 0.4)
 plt.xticks(rotation = 30)
 plt.show()
