@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from playwright.sync_api import sync_playwright, Playwright
-import re 
+import re
 import time
 
 
@@ -23,7 +23,7 @@ dataframe_titles = {
     "Number of Reviews": [],
     "First Genre": [],
     "Second Genre": [],
-    "Third Genre":[],
+    "Third Genre": [],
     "Price": [],
     "Peak Number of Players": [],
 }
@@ -75,4 +75,3 @@ df.to_csv("steam_data.csv")
 
 # df.to_csv("steam_data.csv", sep="\t")
 # print(f"Dataframe: \n {df}")
-
