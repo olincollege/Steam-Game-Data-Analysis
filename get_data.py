@@ -142,21 +142,3 @@ def get_game_genre(soup):
         elem = elem.strip()
         elem = elem.splitlines()
     return elem
-
-
-# link = "https://store.steampowered.com/app/899770/Last_Epoch/"
-# html = requests.get(link).content
-# soup = BeautifulSoup(html, "html.parser")
-# # Testing zone
-# genre = get_game_genre(soup)
-# percent, num = get_reviews(soup)
-# name = get_name(link)
-# print((genre))
-# df.loc[links.index(links[10])] = {
-#     "Game Name": name,
-#     "Percent Positive Reviews": percent,
-#     "Number of Reviews": num,
-#     "Genre": "Genre Insert",
-#     "Price": "price insert",
-#     "Peak Number of Players": "peak insert",
-# }

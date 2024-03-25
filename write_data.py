@@ -41,13 +41,20 @@ for link in links:
         name = get_data.get_name(link)
         percent, num = get_data.get_reviews(soup)
         genre = get_data.get_game_genre(soup)
+
+        top_genre = genre[0:4]
+        print(type(top_genre[0]))
+        print(top_genre)
+        while "Free to Play" in top_genre:
+            top_genre.remove("Free to Play")
+            print(top_genre)
         df.loc[index] = {
             "Game Name": name,
             "Percent Positive Reviews": percent,
             "Number of Reviews": num,
-            "First Genre": genre[0],
-            "Second Genre": genre[1],
-            "Third Genre": genre[2],
+            "First Genre": top_genre[0],
+            "Second Genre": top_genre[1],
+            "Third Genre": top_genre[2],
             "Price": prices[count],
             "Peak Number of Players": peak_players[count],
         }
