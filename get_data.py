@@ -70,6 +70,21 @@ def get_game_links(tbody):
     return links
 
 
+def get_name(link):
+    """
+    Find the name of a game based on its link from the most played list
+
+    Args:
+        link: A string representing the link path to the game
+
+    Returns:
+        A string representing the name of the game
+    """
+
+    name = link[link.rindex("/") + 1 : -1]
+    return name
+
+
 def get_price_and_peak(tbody):
     """
     Finds the price and number of peak players of every game
@@ -123,21 +138,6 @@ def get_price_and_peak(tbody):
         prices.append(price)
         peak_players.append(peak_player)
     return prices, peak_players
-
-
-def get_name(link):
-    """
-    Find the name of a game based on its link from the most played list
-
-    Args:
-        link: A string representing the link path to the game
-
-    Returns:
-        A string representing the name of the game
-    """
-
-    name = link[link.rindex("/") + 1 : -1]
-    return name
 
 
 def get_reviews(soup):
