@@ -1,3 +1,7 @@
+"""
+This module contains functions to retrieve data from the Steam most played list
+"""
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
