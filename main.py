@@ -49,6 +49,10 @@ top_ten_most_negative_reviews, top_ten_most_negative_reviews_popularity = (
     )
 )
 
+price_points, price_points_popularity = (
+    analyze_data.number_playing_priced_games(price, peak_players)
+)
+
 genre_most_popular, genre_most_popular_popularity = (
     analyze_data.most_popular_genres(
         first_genre, second_genre, third_genre, peak_players
@@ -88,6 +92,10 @@ plt.bar(
     color="maroon",
     width=0.4,
 )
+plt.xticks(rotation=30)
+plt.show()
+
+plt.bar(price_points, price_points_popularity, color="maroon", width=0.4)
 plt.xticks(rotation=30)
 plt.show()
 

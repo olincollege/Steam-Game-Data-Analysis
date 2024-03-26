@@ -95,6 +95,25 @@ def top_ten_most_negative_negative_reviews(
         most_negative_reviewed_games_popularity.append(peak_players[i])
     return most_negative_reviewed_games, most_negative_reviewed_games_popularity
 
+<<<<<<< HEAD
+=======
+def number_playing_priced_games(prices, peak_player):
+    price_points = {"Under 10": 0, "10 - 20": 0, "20 - 30": 0, "30 - 40": 0, "40 - 50": 0, "50+": 0}
+    for i in range(len(prices)):
+        if prices[i] < 10:
+            price_points["Under 10"] += peak_player[i]
+        elif prices[i] < 20:
+            price_points["10 - 20"] += peak_player[i]
+        elif prices[i] < 30:
+            price_points["20 - 30"] += peak_player[i]
+        elif prices[i] < 40:
+            price_points["40 - 50"] += peak_player[i]
+        elif prices[i] < 50:
+            price_points["40 - 50"] += peak_player[i]
+        else:
+            price_points["50+"] += peak_player[i]
+    return list(price_points.keys()), list(price_points.values())
+>>>>>>> 10221e1d53d4233d2af8af8958f2461eae113c6e
 
 def partition(names, values, low, high):
 
@@ -170,4 +189,8 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     genre = list(number_playing_genre.keys())
     popularity = list(number_playing_genre.values())
     quick_sort(genre, popularity, 0, len(genre) - 1)
+<<<<<<< HEAD
     return genre, popularity
+=======
+    return genre, popularity
+>>>>>>> 10221e1d53d4233d2af8af8958f2461eae113c6e
