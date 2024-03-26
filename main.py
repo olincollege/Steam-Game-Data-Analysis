@@ -59,56 +59,26 @@ genre_most_popular, genre_most_popular_popularity = (
     )
 )
 
-plt.bar(
-    top_ten_most_positively_reviewed,
-    top_ten_most_positively_reviewed_popularity,
-    color="maroon",
-    width=0.4,
-)
-plt.xticks(rotation=30)
-plt.show()
 
-plt.bar(
-    top_ten_most_positive_reviews,
-    top_ten_most_positive_reviews_popularity,
-    color="maroon",
-    width=0.4,
-)
-plt.xticks(rotation=30)
-plt.show()
+def create_plot(x_axis, y_axis, plot_title, labelx, labely):
+    """
+    Creates a plot to compare two quanities/qualities of a game.
 
-plt.bar(
-    top_ten_most_negatively_reviewed,
-    top_ten_most_negatively_reviewed_popularity,
-    color="maroon",
-    width=0.4,
-)
-plt.xticks(rotation=30)
-plt.show()
+    Args:
+        x_axis: The list of game data that is on the x-axis of the plot.
+                Elements are either strings or ints.
+        y_axis: The list of game data that is on the y-axis of the plot.
+                Elements are either strings or ints.
+        plot_title: A string representing the title of the plot
+        labelx: A string representing the plots x-axis label
+        labely: A string representing the plots y-axis label
 
-plt.bar(
-    top_ten_most_negative_reviews,
-    top_ten_most_negative_reviews_popularity,
-    color="maroon",
-    width=0.4,
-)
-plt.xticks(rotation=30)
-plt.show()
-
-plt.bar(price_points, price_points_popularity, color="maroon", width=0.4)
-plt.xticks(rotation=30)
-plt.show()
-
-plt.bar(
-    genre_most_popular, genre_most_popular_popularity, color="maroon", width=0.4
-)
-plt.xticks(rotation=30)
-plt.show()
-
-# plt.bar(top_reviewed_games, top_reviewed_games_number_playing, color ='maroon',
-#         width = 0.4)
-# plt.xticks(rotation = 30)
-# plt.show()
-
-# plt.plot(price, peak_players, "ro")
-# plt.show()
+    Returns:
+        none
+    """
+    plt.bar(x_axis, y_axis, color="maroon", width=0.4)
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.xticks(rotation=30)
+    plt.show()
