@@ -2,7 +2,6 @@
 This module contains functions to retrieve data from the Steam most played list
 """
 
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 from playwright.sync_api import sync_playwright, Playwright
@@ -194,7 +193,7 @@ def get_game_genre(soup):
         of a game
 
     Returns:
-        A string representing the game's 3 most popular genres,
+        A list representing the game's 3 most popular genres,
         extracted from the html
     """
 
