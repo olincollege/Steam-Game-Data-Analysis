@@ -152,7 +152,7 @@ def get_reviews(soup):
     Returns:
         A string representing the games reviews, extracted from the html
     """
-
+    
     # Find the reviews in the html
     myspan = soup.find_all(
         "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
