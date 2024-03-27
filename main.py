@@ -75,7 +75,7 @@ plt.show()
 # plt.show()
 
 
-def create_plot(x_axis, y_axis, plot_title, labelx, labely):
+def create_plot_bar(x_axis, y_axis, plot_title, labelx, labely):
     """
     Creates a plot to compare two quanities/qualities of a game.
 
