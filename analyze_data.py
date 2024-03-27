@@ -1,3 +1,8 @@
+"""
+This module compiles gathered data together to analyze and observe.
+"""
+
+
 def convert_csv_to_list(df):
     game_name = df["Game Name"].tolist()
     percent_positive = df["Percent Positive Reviews"].tolist()
@@ -8,20 +13,41 @@ def convert_csv_to_list(df):
     price = df["Price"].tolist()
     peak_players = df["Peak Number of Players"].tolist()
 
-    number_reviews = [sub.replace(",", '') for sub in number_reviews]
+    number_reviews = [sub.replace(",", "") for sub in number_reviews]
     number_reviews = [eval(i) for i in number_reviews]
-    return game_name, percent_positive, first_genre, second_genre, third_genre, price, peak_players, number_reviews
+    return (
+        game_name,
+        percent_positive,
+        first_genre,
+        second_genre,
+        third_genre,
+        price,
+        peak_players,
+        number_reviews,
+    )
+
 
 def number_of_positive_and_negative_reviews(percent_positive, number_reviews):
     number_of_positive_reviews = []
     number_of_negative_reviews = []
     for i in range(len(percent_positive)):
-        number_of_positive_reviews.append(int(number_reviews[i] * percent_positive[i]/100))
-        number_of_negative_reviews.append(int(number_reviews[i] * (100 - percent_positive[i])/100))
+        number_of_positive_reviews.append(
+            int(number_reviews[i] * percent_positive[i] / 100)
+        )
+        number_of_negative_reviews.append(
+            int(number_reviews[i] * (100 - percent_positive[i]) / 100)
+        )
     return number_of_positive_reviews, number_of_negative_reviews
 
 def number_playing_priced_games(prices, peak_player):
-    price_points = {"Under 10": 0, "10 - 20": 0, "20 - 30": 0, "30 - 40": 0, "40 - 50": 0, "50+": 0}
+    price_points = {
+        "Under 10": 0,
+        "10 - 20": 0,
+        "20 - 30": 0,
+        "30 - 40": 0,
+        "40 - 50": 0,
+        "50+": 0,
+    }
     for i in range(len(prices)):
         if prices[i] < 10:
             price_points["Under 10"] += peak_player[i]
@@ -36,6 +62,7 @@ def number_playing_priced_games(prices, peak_player):
         else:
             price_points["50+"] += peak_player[i]
     return list(price_points.keys()), list(price_points.values())
+
 
 def partition(names, values, low, high):
     pivot = values[high]
@@ -60,6 +87,7 @@ def quick_sort(names, values, low, high):
         quick_sort(names, values, low, pi - 1)
         quick_sort(names, values, pi + 1, high)
 
+
 def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     number_playing_genre = {}
 
@@ -80,10 +108,12 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
         else:        
             number_playing_genre[third] += peak_players[index]
 
-    number_playing_genre = {key:val for key, val in number_playing_genre.items() if val > 500000}
+    number_playing_genre = {
+        key: val for key, val in number_playing_genre.items() if val > 500000
+    }
 
     genre = list(number_playing_genre.keys())
-    popularity = list(number_playing_genre.values()) 
+    popularity = list(number_playing_genre.values())
     quick_sort(genre, popularity, 0, len(genre) - 1)
     return genre, popularity
 

@@ -1,3 +1,8 @@
+"""
+This module contains functions to retrieve data from the Steam most played list
+"""
+
+import requests
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 import re

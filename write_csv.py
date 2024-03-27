@@ -1,8 +1,12 @@
-import get_data
+"""
+This module writes data from running get_data functions into a csv file.
+"""
+
+import time
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import time
+import get_data
 
 
 mostplayed_html = get_data.get_html_from_mostplayed()
