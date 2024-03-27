@@ -1,98 +1,98 @@
 ,Game Name,Percent Positive Reviews,Number of Reviews,First Genre,Second Genre,Third Genre,Price,Peak Number of Players
-0,CounterStrike_2,87,"7,968,886",FPS,Shooter,Multiplayer,0.0,1491977
-1,Dota_2,81,"2,205,348",MOBA,Multiplayer,Strategy,0.0,615009
-2,PUBG_BATTLEGROUNDS,58,"2,331,098",Survival,Shooter,Battle Royale,0.0,637297
-3,Apex_Legends,78,"808,975",Battle Royale,Multiplayer,FPS,0.0,387994
-4,Stardew_Valley,98,"569,353",Farming Sim,Pixel Graphics,Life Sim,14.99,178483
-5,HELLDIVERS_2,84,"260,917",Online Co-Op,Action,Third-Person Shooter,39.99,229209
-6,Grand_Theft_Auto_V,87,"1,611,529",Open World,Action,Multiplayer,59.97,144922
-7,Dragons_Dogma_2,54,"41,631",RPG,Open World,Action,69.99,146265
-8,NARAKA_BLADEPOINT,75,"211,424",Battle Royale,Multiplayer,Martial Arts,0.0,289787
-9,Tom_Clancys_Rainbow_Six_Siege,85,"1,066,130",FPS,PvP,eSports,19.99,145971
-10,Rust,87,"857,063",Survival,Crafting,Multiplayer,39.99,110381
-11,Wallpaper_Engine,98,"705,412",Mature,Utilities,Software,3.99,104865
-12,Warframe,87,"568,694",Action RPG,Looter Shooter,Third-Person Shooter,0.0,75290
-13,Baldurs_Gate_3,96,"524,217",RPG,Choices Matter,Character Customization,59.99,98742
-14,War_Thunder,75,"472,993",Vehicular Combat,Combat,World War II,0.0,72447
-15,Monster_Hunter_World,88,"258,557",Co-op,Multiplayer,Action,29.99,98411
-16,Crab_Game,91,"150,472",Psychological Horror,Multiplayer,Battle Royale,0.0,68282
-17,Team_Fortress_2,93,"1,036,644",Hero Shooter,Multiplayer,FPS,0.0,71611
-18,EA_SPORTS_FC_24,55,"48,298",Football (Soccer),Sports,Controller,69.99,60973
-19,ELDEN_RING,92,"591,568",Souls-like,Dark Fantasy,Open World,59.99,63873
-20,Palworld,94,"248,046",Multiplayer,Open World,Survival,29.99,74502
-21,Football_Manager_2024,88,"6,109",Simulation,Sports,Strategy,59.99,65354
-22,Dead_by_Daylight,80,"517,056",Horror,Survival Horror,Multiplayer,19.99,60139
-23,Unturned,91,"536,435",Survival,Zombies,Multiplayer,0.0,54544
-24,Sid_Meiers_Civilization_VI,86,"220,020",Strategy,Turn-Based Strategy,Multiplayer,59.99,53452
-25,DayZ,76,"318,842",Survival,Multiplayer,Zombies,44.99,54044
-26,Last_Epoch,77,"80,887",Action RPG,Loot,Hack and Slash,34.99,47885
-27,Hearts_of_Iron_IV,91,"200,222",Strategy,World War II,Grand Strategy,49.99,44263
-28,Lost_Ark,71,"198,696",MMORPG,Action RPG,Multiplayer,0.0,54886
-29,Red_Dead_Redemption_2,91,"509,518",Open World,Story Rich,Western,59.99,40667
-30,The_Sims_4,87,"131,329",Life Sim,Building,Character Customization,0.0,36659
-31,Destiny_2,80,"587,388",Open World,FPS,Looter Shooter,0.0,46110
-32,Euro_Truck_Simulator_2,97,"553,142",Driving,Transportation,Simulation,19.99,39581
-33,Terraria,97,"1,009,083",Open World Survival Craft,Sandbox,Survival,9.99,37192
-34,Cyberpunk_2077,83,"640,936",Cyberpunk,Open World,Nudity,59.99,34420
-35,Myth_of_Empires,72,"10,655",Building,Open World Survival Craft,Sandbox,39.99,30661
-36,Overwatch_2,17,"252,022",Hero Shooter,FPS,Multiplayer,0.0,35728
-37,Supermarket_Simulator,94,"17,133",Simulation,Economy,Management,12.99,31171
-38,7_Days_to_Die,88,"209,272",Early Access,Survival,Zombies,24.99,31514
-39,Garrys_Mod,96,"906,439",Sandbox,Moddable,Multiplayer,9.99,30958
-40,ARK_Survival_Evolved,83,"514,362",Open World Survival Craft,Survival,Multiplayer,14.99,28226
-41,tModLoader,97,"239,702",Adventure,Action,Indie,0.0,30560
-42,Balatro,97,"21,632",Roguelike Deckbuilder,Card Game,Deckbuilding,14.99,26612
-43,Dont_Starve_Together,95,"303,359",Survival,Open World Survival Craft,Multiplayer,14.99,39844
-44,Farming_Simulator_22,92,"49,007",Simulation,Farming Sim,Co-op,29.99,37028
-45,Project_Zomboid,94,"216,479",Survival,Zombies,Open World,19.99,27884
-46,Left_4_Dead_2,97,"632,587",Zombies,Co-op,FPS,9.99,32399
-47,PAYDAY_2,89,"425,823",Co-op,Action,FPS,9.99,33507
-48,Mount__Blade_II_Bannerlord,88,"187,432",Medieval,Strategy,Open World,49.99,26608
-49,Horizon_Forbidden_West_Complete_Edition,93,"3,553",Action,Singleplayer,Open World,59.99,29791
-50,THE_FINALS,75,"151,234",Multiplayer,Shooter,FPS,0.0,25025
-51,Battlefield_2042,45,"195,454",FPS,Shooter,Military,59.99,31209
-52,Hunt_Showdown,82,"153,920",Open World,Extraction Shooter,Atmospheric,46.98,26101
-53,RimWorld,98,"152,750",Colony Sim,Base Building,Survival,34.99,23888
-54,MIR4,65,"13,975",PvE,PvP,MMORPG,0.0,22884
-55,VRChat,74,"213,795",VR,Multiplayer,Memes,0.0,28003
-56,Total_War_WARHAMMER_III,62,"68,400",Strategy,Turn-Based Strategy,Grand Strategy,59.99,23816
-57,Lethal_Company,97,"297,290",Online Co-Op,Horror,First-Person,9.99,26832
-58,The_Elder_Scrolls_V_Skyrim_Special_Edition,93,"157,173",Open World,RPG,Adventure,39.99,25304
-59,The_Binding_of_Isaac_Rebirth,97,"253,817",Action Roguelike,Roguelike,Indie,14.99,22909
-60,Enshrouded,86,"40,296",Open World,Survival,Base Building,29.99,23843
-61,Age_of_Empires_II_Definitive_Edition,94,"124,522",Strategy,RTS,City Builder,19.99,22036
-62,YuGiOh_Master_Duel,75,"71,141",Card Game,Strategy,Trading Card Game,0.0,24542
-63,FINAL_FANTASY_XIV_Online,88,"66,351",MMORPG,RPG,Massively Multiplayer,19.99,28179
-64,SCUM,75,"81,032",Survival,Open World Survival Craft,Multiplayer,39.99,21330
-65,Phasmophobia,96,"541,680",Horror,Online Co-Op,Multiplayer,13.99,27961
-66,Valheim,94,"380,163",Open World Survival Craft,Survival,Online Co-Op,19.99,24269
-67,Battlefield_V,71,"173,691",FPS,Multiplayer,World War II,49.99,38736
-68,Crusader_Kings_III,91,"68,258",Strategy,Simulation,Medieval,49.99,20739
-69,NBA_2K24,24,"20,625",Sports,Basketball,Simulation,59.99,22282
-70,Geometry_Dash,93,"314,074",Difficult,Music,Level Editor,3.99,21843
-71,Crosshair_X,92,"13,786",Action,Utilities,Shooter,7.99,20201
-72,Heros_Land,57,"34,789",Survival,Open World,PvP,0.0,26049
-73,Backpack_Battles,94,"6,138",Early Access,Auto Battler,Inventory Management,12.99,20054
-74,Street_Fighter_6,86,"22,964",2D Fighter,Fighting,Character Customization,59.99,23400
-75,Granblue_Fantasy_Relink,89,"28,104",Anime,Action,JRPG,59.99,22247
-76,Black_Desert,76,"53,867",MMORPG,Massively Multiplayer,Open World,9.99,19931
-77,Europa_Universalis_IV,86,"84,561",Grand Strategy,Strategy,Historical,39.99,17629
-78,Fallout_4,83,"216,461",Open World,Post-apocalyptic,Singleplayer,19.99,18981
-79,Sid_Meiers_Civilization_V,96,"119,482",Turn-Based Strategy,Strategy,Turn-Based,29.99,17752
-80,BeamNGdrive,97,"217,522",Simulation,Driving,Realistic,24.99,18685
-81,Forza_Horizon_5,88,"156,055",Racing,Open World,Driving,59.99,18817
-82,Russian_Fishing_4,47,"60,903",Fishing,Simulation,Multiplayer,0.0,19961
-83,The_Witcher_3_Wild_Hunt,96,"700,202",Open World,RPG,Story Rich,39.99,17176
-84,Sons_Of_The_Forest,86,"167,272",Survival,Open World,Multiplayer,29.99,20176
-85,MONSTER_HUNTER_RISE,81,"59,693",Action,RPG,Online Co-Op,39.99,21629
-86,Soundpad,96,"62,115",Utilities,Audio Production,Music,4.99,17338
-87,Brawlhalla,82,"358,911",Multiplayer,Fighting,2D Fighter,0.0,17504
-88,The_Elder_Scrolls_Online,83,"118,733",RPG,MMORPG,Open World,19.99,17651
-89,Slay_the_Spire,97,"129,990",Roguelike Deckbuilder,Card Game,Card Battler,24.99,16840
-90,ARK_Survival_Ascended,58,"42,986",Early Access,Survival,Open World,59.98,15568
-91,Stellaris,88,"114,094",Space,Grand Strategy,Strategy,39.99,14485
-92,Age_of_Empires_IV_Anniversary_Edition,87,"49,426",Strategy,RTS,Base Building,39.99,15475
-93,Deep_Rock_Galactic,97,"225,056",Dwarf,Co-op,PvE,29.99,14354
-94,Factorio,97,"143,517",Automation,Base Building,Resource Management,35.0,15521
-95,TEKKEN_8,87,"14,620",Fighting,Action,3D Fighter,69.99,13712
-96,Cookie_Clicker,97,"57,661",Clicker,Idler,Casual,4.99,13141
+0,CounterStrike_2,87,"7,969,271",FPS,Shooter,Multiplayer,0.0,1491977
+1,Dota_2,81,"2,205,512",MOBA,Multiplayer,Strategy,0.0,615009
+2,PUBG_BATTLEGROUNDS,58,"2,331,201",Survival,Shooter,Battle Royale,0.0,637297
+3,HELLDIVERS_2,84,"261,223",Online Co-Op,Action,Third-Person Shooter,39.99,229209
+4,Tom_Clancys_Rainbow_Six_Siege,85,"1,066,299",FPS,PvP,eSports,19.99,151338
+5,Stardew_Valley,98,"569,443",Farming Sim,Pixel Graphics,Life Sim,14.99,178483
+6,Dragons_Dogma_2,54,"42,013",RPG,Open World,Action,69.99,141748
+7,Apex_Legends,78,"809,056",Battle Royale,Multiplayer,FPS,0.0,387994
+8,Grand_Theft_Auto_V,87,"1,611,641",Open World,Action,Multiplayer,59.97,144922
+9,Rust,87,"857,164",Survival,Crafting,Multiplayer,39.99,106122
+10,Baldurs_Gate_3,96,"524,327",RPG,Choices Matter,Character Customization,59.99,98742
+11,Warframe,87,"568,731",Action RPG,Looter Shooter,Third-Person Shooter,0.0,80039
+12,War_Thunder,75,"473,068",Vehicular Combat,Combat,World War II,0.0,72447
+13,Football_Manager_2024,88,"6,113",Simulation,Sports,Strategy,59.99,65354
+14,EA_SPORTS_FC_24,55,"48,374",Football (Soccer),Sports,Controller,69.99,64183
+15,Team_Fortress_2,93,"1,036,678",Hero Shooter,Multiplayer,FPS,0.0,71448
+16,Dead_by_Daylight,80,"517,079",Horror,Survival Horror,Multiplayer,19.99,60139
+17,Crab_Game,91,"150,478",Psychological Horror,Multiplayer,Battle Royale,0.0,68282
+18,ELDEN_RING,92,"591,623",Souls-like,Dark Fantasy,Open World,59.99,63873
+19,Unturned,91,"536,450",Survival,Zombies,Multiplayer,0.0,54544
+20,DayZ,76,"318,860",Survival,Multiplayer,Zombies,44.99,53010
+21,Wallpaper_Engine,98,"705,464",Mature,Utilities,Software,3.99,104865
+22,Lost_Ark,71,"198,699",MMORPG,Action RPG,Multiplayer,0.0,52715
+23,Hearts_of_Iron_IV,91,"200,242",Strategy,World War II,Grand Strategy,49.99,44263
+24,Sid_Meiers_Civilization_VI,86,"220,029",Strategy,Turn-Based Strategy,Multiplayer,59.99,53452
+25,Last_Epoch,77,"80,945",Action RPG,Loot,Hack and Slash,34.99,46972
+26,Euro_Truck_Simulator_2,97,"553,184",Driving,Transportation,Simulation,19.99,39396
+27,Destiny_2,80,"587,401",Open World,FPS,Looter Shooter,0.0,46110
+28,Farming_Simulator_22,92,"49,019",Simulation,Farming Sim,Co-op,29.99,36561
+29,The_Sims_4,87,"131,349",Life Sim,Building,Character Customization,0.0,36433
+30,Palworld,94,"248,100",Multiplayer,Open World,Survival,29.99,74502
+31,Garrys_Mod,96,"906,487",Sandbox,Moddable,Multiplayer,9.99,30854
+32,Supermarket_Simulator,94,"17,203",Simulation,Economy,Management,12.99,30736
+33,Terraria,97,"1,009,139",Open World Survival Craft,Sandbox,Survival,9.99,37192
+34,Red_Dead_Redemption_2,91,"509,586",Open World,Story Rich,Western,59.99,40667
+35,Horizon_Forbidden_West_Complete_Edition,93,"3,597",Action,Singleplayer,Open World,59.99,29751
+36,PAYDAY_2,89,"425,830",Co-op,Action,FPS,9.99,33507
+37,THE_FINALS,75,"151,346",Multiplayer,Shooter,FPS,0.0,28151
+38,Hunt_Showdown,82,"153,929",Open World,Extraction Shooter,Atmospheric,46.98,27910
+39,Project_Zomboid,94,"216,530",Survival,Zombies,Open World,19.99,27884
+40,FINAL_FANTASY_XIV_Online,88,"66,356",MMORPG,RPG,Massively Multiplayer,19.99,28179
+41,Phasmophobia,96,"541,742",Horror,Online Co-Op,Multiplayer,13.99,27961
+42,Enshrouded,86,"40,375",Open World,Survival,Base Building,29.99,25794
+43,NARAKA_BLADEPOINT,75,"211,438",Battle Royale,Multiplayer,Martial Arts,0.0,289787
+44,Balatro,97,"21,718",Roguelike Deckbuilder,Card Game,Deckbuilding,14.99,26612
+45,ARK_Survival_Evolved,83,"514,377",Open World Survival Craft,Survival,Multiplayer,14.99,28226
+46,Myth_of_Empires,72,"10,657",Building,Open World Survival Craft,Sandbox,39.99,30661
+47,Overwatch_2,17,"252,057",Hero Shooter,FPS,Multiplayer,0.0,35728
+48,7_Days_to_Die,88,"209,294",Early Access,Survival,Zombies,24.99,31514
+49,Monster_Hunter_World,88,"258,569",Co-op,Multiplayer,Action,29.99,98411
+50,tModLoader,97,"239,728",Adventure,Action,Indie,0.0,30560
+51,Cyberpunk_2077,83,"640,966",Cyberpunk,Open World,Nudity,59.99,34420
+52,The_Elder_Scrolls_V_Skyrim_Special_Edition,93,"157,184",Open World,RPG,Adventure,39.99,25304
+53,RimWorld,98,"152,767",Colony Sim,Base Building,Survival,34.99,23888
+54,Valheim,94,"380,179",Open World Survival Craft,Survival,Online Co-Op,19.99,24269
+55,Total_War_WARHAMMER_III,62,"68,406",Strategy,Turn-Based Strategy,Grand Strategy,59.99,23816
+56,VRChat,74,"213,807",VR,Multiplayer,Memes,0.0,28003
+57,Age_of_Empires_II_Definitive_Edition,94,"124,530",Strategy,RTS,City Builder,19.99,22036
+58,Lethal_Company,97,"297,353",Online Co-Op,Horror,First-Person,9.99,26832
+59,Geometry_Dash,93,"314,116",Difficult,Music,Level Editor,3.99,21713
+60,MIR4,65,"13,974",PvE,PvP,MMORPG,0.0,22884
+61,Crusader_Kings_III,91,"68,266",Strategy,Simulation,Medieval,49.99,20739
+62,Left_4_Dead_2,97,"632,630",Zombies,Co-op,FPS,9.99,32399
+63,Crosshair_X,92,"13,790",Action,Utilities,Shooter,7.99,20201
+64,Sons_Of_The_Forest,86,"167,304",Survival,Open World,Multiplayer,29.99,20176
+65,Mount__Blade_II_Bannerlord,88,"187,446",Medieval,Strategy,Open World,49.99,26608
+66,Black_Desert,76,"53,874",MMORPG,Massively Multiplayer,Open World,9.99,19609
+67,BeamNGdrive,97,"217,569",Simulation,Driving,Realistic,24.99,18560
+68,The_Binding_of_Isaac_Rebirth,97,"253,837",Action Roguelike,Roguelike,Indie,14.99,22909
+69,Fallout_4,83,"216,473",Open World,Post-apocalyptic,Singleplayer,19.99,18981
+70,Europa_Universalis_IV,86,"84,562",Grand Strategy,Strategy,Historical,39.99,18082
+71,Battlefield_2042,45,"195,491",FPS,Shooter,Military,59.99,31209
+72,Sid_Meiers_Civilization_V,96,"119,484",Turn-Based Strategy,Strategy,Turn-Based,29.99,17928
+73,Brawlhalla,82,"358,925",Multiplayer,Fighting,2D Fighter,0.0,17628
+74,Soundpad,96,"62,125",Utilities,Audio Production,Music,4.99,17463
+75,The_Elder_Scrolls_Online,83,"118,742",RPG,MMORPG,Open World,19.99,17630
+76,Arma_3,91,"151,953",Military,Action,Multiplayer,29.99,16017
+77,Assetto_Corsa,92,"92,005",Racing,Automobile Sim,Simulation,19.99,15940
+78,ARK_Survival_Ascended,58,"42,998",Early Access,Survival,Open World,59.98,15568
+79,Sea_of_Thieves_2024_Edition,90,"275,584",Multiplayer,Adventure,Open World,39.99,15436
+80,Factorio,97,"143,526",Automation,Base Building,Resource Management,35.0,15521
+81,Stellaris,88,"114,098",Space,Grand Strategy,Strategy,39.99,14485
+82,YuGiOh_Master_Duel,75,"71,147",Card Game,Strategy,Trading Card Game,0.0,24542
+83,Squad,83,"125,952",Military,Realistic,FPS,49.99,14362
+84,The_Witcher_3_Wild_Hunt,96,"700,216",Open World,RPG,Story Rich,39.99,17176
+85,Deep_Rock_Galactic,97,"225,073",Dwarf,Co-op,PvE,29.99,14354
+86,Forza_Horizon_5,88,"156,097",Racing,Open World,Driving,59.99,18817
+87,CounterStrike,97,"148,133",Action,FPS,Multiplayer,9.99,13669
+88,Cookie_Clicker,97,"57,664",Clicker,Idler,Casual,4.99,13124
+89,SCUM,75,"81,034",Survival,Open World Survival Craft,Multiplayer,39.99,21330
+90,Path_of_Exile,88,"217,785",Dark Fantasy,Action RPG,Hack and Slash,0.0,12739
+91,SMITE,79,"116,121",MOBA,Multiplayer,Action,0.0,15166
+92,World_of_Tanks_Blitz,79,"138,394",Tanks,Shooter,FPS,0.0,13277
+93,Dont_Starve_Together,95,"303,379",Survival,Open World Survival Craft,Multiplayer,14.99,39844
+94,Satisfactory,97,"134,054",Base Building,Automation,Open World,29.99,12451
+95,TEKKEN_8,87,"14,636",Fighting,Action,3D Fighter,69.99,13712
+96,Hogwarts_Legacy,91,"186,210",Magic,Fantasy,Open World,59.99,11852

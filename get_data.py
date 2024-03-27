@@ -2,10 +2,9 @@
 This module contains functions to retrieve data from the Steam most played list
 """
 
-import requests
+import re
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
-import re
 
 
 def get_html_from_mostplayed():
@@ -152,7 +151,7 @@ def get_reviews(soup):
     Returns:
         A string representing the games reviews, extracted from the html
     """
-    
+
     # Find the reviews in the html
     myspan = soup.find_all(
         "span", {"class": "nonresponsive_hidden responsive_reviewdesc"}
