@@ -1,10 +1,7 @@
-import analyze_data
 import get_data
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from playwright.sync_api import sync_playwright, Playwright
-import re
 import time
 
 
@@ -16,7 +13,6 @@ links = get_data.get_game_links(tbody)
 
 prices, peak_players = get_data.get_price_and_peak(tbody)
 
-print(prices)
 # make a dataframe, to be updated
 dataframe_titles = {
     "Game Name": [],
@@ -42,7 +38,7 @@ for link in links:
         name = get_data.get_name(link)
         percent, num = get_data.get_reviews(soup)
         genre = get_data.get_game_genre(soup)
-
+        
         top_genre = genre[0:4]
         while "Free to Play" in top_genre:
             top_genre.remove("Free to Play")
@@ -60,23 +56,3 @@ for link in links:
     count += 1
     time.sleep(5)
 df.to_csv("steam_data.csv")
-
-
-# html = requests.get(links[10]).content
-# soup = BeautifulSoup(html, "html.parser")
-# # Adding all of our data into the dataframe
-# genre = get_data.get_game_genre(soup)
-# print(genre)
-# percent, num = get_data.get_reviews(soup)
-# name = get_data.get_name(links[10])
-# df.loc[links.index(links[10])] = {
-#     "Game Name": name,
-#     "Percent Positive Reviews": percent,
-#     "Number of Reviews": num,
-#     "Genre": genre[0],
-#     "Price": "price insert",
-#     "Peak Number of Players": "peak insert",
-# }
-
-# df.to_csv("steam_data.csv", sep="\t")
-# print(f"Dataframe: \n {df}")
