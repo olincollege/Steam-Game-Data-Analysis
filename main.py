@@ -28,6 +28,9 @@ number_of_positive_reviews, number_of_negative_reviews = (
 price_points, price_points_popularity = (
     analyze_data.number_playing_priced_games(price, peak_players)
 )
+price_points, price_points_popularity = (
+    analyze_data.number_playing_priced_games(price, peak_players)
+)
 
 genre_most_popular, genre_most_popular_popularity = (
     analyze_data.most_popular_genres(
@@ -38,44 +41,12 @@ genre_most_popular, genre_most_popular_popularity = (
 genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
     first_genre, second_genre, third_genre
 )
-
-plt.scatter(percent_positive, peak_players)
-plt.title("Positive Review Percentage vs Popularity")
-plt.xlabel("Positive Review Percentage (%)")
-plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
-plt.show()
-
-plt.scatter(number_of_positive_reviews, peak_players)
-plt.title("Number of Positive Reviews vs Popularity")
-plt.xlabel("Number of Positive Reviews")
-plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
-plt.show()
-
-plt.bar(price_points, price_points_popularity, color="maroon", width=0.4)
-plt.xticks(rotation=30)
-plt.title("Popularity of Games at Different Price Points")
-plt.xlabel("Price Points ($)")
-plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
-plt.show()
-
-# plt.bar(genre_most_common, genre_most_common_number, color ='maroon',
-#         width = 0.4)
-# plt.xticks(rotation = 30)
-# plt.title("Number of Different Genres")
-# plt.xlabel("Genre")
-# plt.ylabel("Amount")
-# plt.show()
-
-# plt.bar(genre_most_popular, genre_most_popular_popularity, color ='maroon',
-#         width = 0.4)
-# plt.xticks(rotation = 30)
-# plt.title("Popularity of Different Genres")
-# plt.xlabel("Genre")
-# plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
-# plt.show()
+genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
+    first_genre, second_genre, third_genre
+)
 
 
-def create_plot_bar(x_axis, y_axis, plot_title, labelx, labely):
+def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
     """
     Creates a plot to compare two quanities/qualities of a game.
 
@@ -91,9 +62,16 @@ def create_plot_bar(x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-    plt.bar(x_axis, y_axis, color="maroon", width=0.4)
-    plt.title(plot_title)
-    plt.xlabel(labelx)
-    plt.ylabel(labely)
-    plt.xticks(rotation=30)
-    plt.show()
+    if type == "bar":
+        plt.bar(x_axis, y_axis, color="maroon", width=0.4)
+        plt.title(plot_title)
+        plt.xlabel(labelx)
+        plt.ylabel(labely)
+        plt.xticks(rotation=30)
+        plt.show()
+    if type == "scatter":
+        plt.scatter(x_axis, y_axis)
+        plt.title(plot_title)
+        plt.xlabel(labelx)
+        plt.ylabel(labely)
+        plt.show()
