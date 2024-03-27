@@ -28,6 +28,9 @@ number_of_positive_reviews, number_of_negative_reviews = (
 price_points, price_points_popularity = (
     analyze_data.number_playing_priced_games(price, peak_players)
 )
+price_points, price_points_popularity = (
+    analyze_data.number_playing_priced_games(price, peak_players)
+)
 
 genre_most_popular, genre_most_popular_popularity = (
     analyze_data.most_popular_genres(
@@ -38,11 +41,15 @@ genre_most_popular, genre_most_popular_popularity = (
 genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
     first_genre, second_genre, third_genre
 )
+genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
+    first_genre, second_genre, third_genre
+)
 
 plt.scatter(percent_positive, peak_players)
 plt.title("Positive Review Percentage vs Popularity")
 plt.xlabel("Positive Review Percentage (%)")
 plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
+plt.show()
 plt.show()
 
 number_of_positive_reviews, peak_players = zip(*[(x, y) for x, y in zip(number_of_positive_reviews, peak_players) if x <= 500000])
@@ -57,26 +64,30 @@ plt.show()
 
 plt.bar(price_points, price_points_popularity, color="maroon", width=0.4)
 plt.xticks(rotation=30)
+plt.bar(price_points, price_points_popularity, color="maroon", width=0.4)
+plt.xticks(rotation=30)
 plt.title("Popularity of Games at Different Price Points")
 plt.xlabel("Price Points ($)")
 plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
 plt.show()
 
-plt.bar(genre_most_common, genre_most_common_number, color="maroon", width=0.4)
-plt.xticks(rotation=30)
-plt.title("Number of Different Genres")
-plt.xlabel("Genre")
-plt.ylabel("Amount")
-plt.show()
+# plt.bar(genre_most_common, genre_most_common_number, color ='maroon',
+#         width = 0.4)
+# plt.xticks(rotation = 30)
+# plt.title("Number of Different Genres")
+# plt.xlabel("Genre")
+# plt.ylabel("Amount")
+# plt.show()
 
-plt.bar(
-    genre_most_popular, genre_most_popular_popularity, color="maroon", width=0.4
-)
-plt.xticks(rotation=30)
-plt.title("Popularity of Different Genres")
-plt.xlabel("Genre")
-plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
-plt.show()
+# plt.bar(genre_most_popular, genre_most_popular_popularity, color ='maroon',
+#         width = 0.4)
+# plt.xticks(rotation = 30)
+# plt.title("Popularity of Different Genres")
+# plt.xlabel("Genre")
+# plt.ylabel("Popularity (Peak Players over 24 Hour Period)")
+# plt.show()
+
+
 
 
 def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
@@ -95,10 +106,9 @@ def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-    if type == "bar":
-        plt.bar(x_axis, y_axis, color="maroon", width=0.4)
-        plt.title(plot_title)
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        plt.xticks(rotation=30)
-        plt.show()
+    plt.bar(x_axis, y_axis, color="maroon", width=0.4)
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.xticks(rotation=30)
+    plt.show()
