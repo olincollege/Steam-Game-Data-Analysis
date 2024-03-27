@@ -17,7 +17,6 @@ links = get_data.get_game_links(tbody)
 
 prices, peak_players = get_data.get_price_and_peak(tbody)
 
-print(prices)
 # make a dataframe, to be updated
 dataframe_titles = {
     "Game Name": [],
@@ -43,7 +42,7 @@ for link in links:
         name = get_data.get_name(link)
         percent, num = get_data.get_reviews(soup)
         genre = get_data.get_game_genre(soup)
-
+        
         top_genre = genre[0:4]
         while "Free to Play" in top_genre:
             top_genre.remove("Free to Play")
