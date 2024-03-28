@@ -93,6 +93,7 @@ def number_playing_priced_games(prices, peak_player):
             price_points["50+"] += peak_player[i]
     return list(price_points.keys()), list(price_points.values())
 
+
 def partition(names, values, low, high):
     """
     Partitions list based on pivot point and swaps values. The lists values
@@ -149,20 +150,21 @@ def quick_sort(names, values, low, high):
         quick_sort(names, values, low, p_index - 1)
         quick_sort(names, values, p_index + 1, high)
 
+
 def most_common_genres(first_genre, second_genre, third_genre):
     """
-    Computes how many occurances of each genre among the top 100 games and returns
-    any genre with more than 7 occurances.
+    Computes how many occurances of each genre among the top 100 games and
+    returns any genre with more than 7 occurances.
 
     Arg:
         first_genre: list of all the top first genres of the games
         second_genre: list of all the top second genres of the games
         third_genre: list of all the top third genres of the games
-    
+
     Return:
-        Two lists. One of which contains strings that represent the top 
+        Two lists. One of which contains strings that represent the top
         genres and the other a list of integers with how many occurances of each
-        genre. The lists are ranked in ascending order based on the occurances. 
+        genre. The lists are ranked in ascending order based on the occurances.
     """
     number_of_genre = {}
     length = len(first_genre)

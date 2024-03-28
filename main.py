@@ -94,8 +94,8 @@ def create_scatter_plot(x_axis, y_axis, plot_title, labelx, labely):
     """
     colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
     count = 0
-    for c in colors:
-        plt.scatter(x_axis[count], y_axis[count], color=c)
+    for rainbow in colors:
+        plt.scatter(x_axis[count], y_axis[count], color=rainbow)
         count += 1
     plt.title(plot_title)
     plt.xlabel(labelx)
