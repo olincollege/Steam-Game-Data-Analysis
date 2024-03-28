@@ -49,26 +49,26 @@ number_playing_priced_games_cases = [
 
 most_popular_genres_cases = [
     # Check that empty returns all empty lists
-    ([], [], [], [], [], []),
+    (([], [], [], []), ([], [])),
     # Check that a genres with under 500000 players are excluded
-    (["Survival"], ["FPS"], ["Open World"], [499999], [], []),
+    ((["Survival"], ["FPS"], ["Open World"], [499999]), ([], [])),
     # Check that genres from the same game tie with same number of players
     (
-        ["Survival"],
-        ["FPS"],
-        ["Open World"],
-        [500001],
-        ["Survival", "FPS", "Open World"],
-        [500001, 500001, 500001],
+        (["Survival"], ["FPS"], ["Open World"], [500001]),
+        (["Survival", "FPS", "Open World"], [500001, 500001, 500001]),
     ),
     # Check that genres from multiple games are sorted correctly
     (
-        ["Survival", "FPS"],
-        ["FPS", "Shooter"],
-        ["Open World", "Multiplayer"],
-        [500001, 500001],
-        ["Survival", "Open World", "Shooter", "Multiplayer", "FPS"],
-        [500001, 500001, 500001, 500001, 1000002],
+        (
+            ["Survival", "FPS"],
+            ["FPS", "Shooter"],
+            ["Open World", "Multiplayer"],
+            [500001, 500001],
+        ),
+        (
+            ["Survival", "Open World", "Shooter", "Multiplayer", "FPS"],
+            [500001, 500001, 500001, 500001, 1000002],
+        ),
     ),
 ]
 
@@ -85,17 +85,86 @@ most_common_genres_cases = [
     ),
     # Check that if a genre occurs more than 10 times it is ranked
     (
-        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
-        ["FPS", "Shooter", "none", "of", "these", "show", "up", "yay", "now", "they", "do"],
-        ["evil", "cackle", "you'll", "never", "take", "me", "alive", "hah", "hah", "hah", "hah"],
+        [
+            "Survival",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+        ],
+        [
+            "FPS",
+            "Shooter",
+            "none",
+            "of",
+            "these",
+            "show",
+            "up",
+            "yay",
+            "now",
+            "they",
+            "do",
+        ],
+        [
+            "evil",
+            "cackle",
+            "you'll",
+            "never",
+            "take",
+            "me",
+            "alive",
+            "hah",
+            "hah",
+            "hah",
+            "hah",
+        ],
         ["FPS"],
         [11],
     ),
     # Check that multiple genres can be ranked and sorted from every list
     (
-        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
-        ["FPS", "meme", "you'll", "never", "take", "meme", "meme", "alive", "meme", "meme"],
-        ["FPS", "cackle", "meme", "meme", "meme", "meme", "meme", "hah", "meme", "meme"],
+        [
+            "Survival",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+            "FPS",
+        ],
+        [
+            "FPS",
+            "meme",
+            "you'll",
+            "never",
+            "take",
+            "meme",
+            "meme",
+            "alive",
+            "meme",
+            "meme",
+        ],
+        [
+            "FPS",
+            "cackle",
+            "meme",
+            "meme",
+            "meme",
+            "meme",
+            "meme",
+            "hah",
+            "meme",
+            "meme",
+        ],
         ["FPS", "meme"],
         [11, 12],
     ),
@@ -157,32 +226,29 @@ def test_number_playing_priced_games_cases(
 
 
 @pytest.mark.parametrize(
-    "first_genre,second_genre,third_genre,num_players,pop_genres,genre_players",
+    "inputs,outputs",
     most_popular_genres_cases,
 )
-def test_most_popular_genres(
-    first_genre,
-    second_genre,
-    third_genre,
-    num_players,
-    pop_genres,
-    genre_players,
-):
+def test_most_popular_genres(inputs, outputs):
     """
     Tests that the genres are sorted according to the number of players in each
     genre
 
     Args:
+        inputs: All the function inputs, below
         first_genre: list of all the top first genres of the games
         second_genre: list of all the top second genres of the games
         third_genre: list of all the top third genres of the games
         num_players: list containing strings of peak player numbers of the
         games
+        outputs: All the function outputs, below
         pop_genres: list containing strings that represent the top genres
         Ranked in ascending order based on the popularity.
         genre_players: list of integers with how popular each genre
         is. Ranked in ascending order based on the popularity.
     """
+    first_genre, second_genre, third_genre, num_players = inputs
+    pop_genres, genre_players = outputs
     result_genres, result_players = most_popular_genres(
         first_genre, second_genre, third_genre, num_players
     )

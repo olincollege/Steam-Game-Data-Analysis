@@ -25,7 +25,11 @@ get_game_links_cases = [
     ),
     # Check that a tbody with multiple links returns all links
     (
-        "hello-https://store.steampowered.com/app/730/CounterStrike_2?-goodbye-https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS?-bye",
+        (
+            "hello-https://store.steampowered.com/app/730/CounterStrike_2?-good"
+            "bye-https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS?-"
+            "bye"
+        ),
         [
             "https://store.steampowered.com/app/730/CounterStrike_2?",
             "https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS?",
@@ -141,4 +145,3 @@ def test_get_game_genre():
         assert isinstance(genre2, str)
     for genre3 in df["Third Genre"]:
         assert isinstance(genre3, str)
-        
