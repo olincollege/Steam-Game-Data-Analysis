@@ -19,11 +19,12 @@ df = pd.read_csv("steam_data.csv")
     number_reviews,
 ) = analyze_data.convert_csv_to_list(df)
 
-number_of_positive_reviews, number_of_negative_reviews = (
-    analyze_data.number_of_positive_and_negative_reviews(
+number_of_positive_reviews = (
+    analyze_data.number_of_positive_reviews(
         percent_positive, number_reviews
     )
 )
+print(len(number_of_positive_reviews))
 
 price_points, price_points_popularity = (
     analyze_data.number_playing_priced_games(price, peak_players)

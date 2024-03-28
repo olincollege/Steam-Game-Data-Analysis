@@ -36,31 +36,37 @@ def convert_csv_to_list(df):
     )
 
 
-def number_of_positive_and_negative_reviews(percent_positive, number_reviews):
-    number_of_positive_reviews = []
-    number_of_negative_reviews = []
-    length = len(percent_positive)
-    for i in range(length):
-        number_of_positive_reviews.append(
-            int(number_reviews[i] * percent_positive[i] / 100)
-        )
-        number_of_negative_reviews.append(
-            int(number_reviews[i] * (100 - percent_positive[i]) / 100)
-        )
-    return number_of_positive_reviews, number_of_negative_reviews
-
-
-def number_playing_priced_games(prices, peak_player):
+def number_of_positive_reviews(percent_positive, number_reviews):
     """
     Gets the number of positive reviews of all the games.
 
     Args:
         percent_positive: list containing integers representing the
-        ratings of all the games number_reviews: list containing
-        integer with the number of reivews of all the games
+        ratings of all the games
+
+        number_reviews: list containing integers with the number of
+        reivews of all the games
 
     Return:
         list containing the number of positive reviews of each game.
+    """
+    number_of_positive_reviews = []
+    length = len(percent_positive)
+    for i in range(length):
+        number_of_positive_reviews.append(
+            int(number_reviews[i] * percent_positive[i] / 100)
+        )
+    return number_of_positive_reviews
+
+
+def number_playing_priced_games(prices, peak_player):
+    """
+    Gets number of players playing games between certain price
+    points
+
+    Args:
+        prices: list containing floats of prices of each games
+        peak_players: list containing ints of number of peak players of each game
     """
     price_points = {
         "Under 10": 0,
@@ -141,10 +147,10 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     genres that have more than 500000 players.
 
     Arg:
-        first_genre: list of all the top first genres of the games
-        second_genre: list of all the top second genres of the games
-        third_genre: list of all the top third genres of the games
-        peak_players: list of peak player numbers of the games
+        first_genre: list containing strings of all the top first genres of the games
+        second_genre: list containing strings of all the top second genres of the games
+        third_genre: list containing strings of all the top third genres of the games
+        peak_players: list containing strings of peak player numbers of the games
 
     Return:
         Two lists. One of which contains strings that represent the top
