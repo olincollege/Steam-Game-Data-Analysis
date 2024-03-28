@@ -83,21 +83,21 @@ most_common_genres_cases = [
         [],
         [],
     ),
-    # Check that if a genre occurs more than 7 times it is ranked
+    # Check that if a genre occurs more than 10 times it is ranked
     (
-        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
-        ["FPS", "Shooter", "none", "of", "these", "show", "up", "yay"],
-        ["evil", "cackle", "you'll", "never", "take", "me", "alive", "hah"],
+        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
+        ["FPS", "Shooter", "none", "of", "these", "show", "up", "yay", "now", "they", "do"],
+        ["evil", "cackle", "you'll", "never", "take", "me", "alive", "hah", "hah", "hah", "hah"],
         ["FPS"],
-        [8],
+        [11],
     ),
     # Check that multiple genres can be ranked and sorted from every list
     (
-        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
-        ["FPS", "meme", "you'll", "never", "take", "meme", "meme", "alive"],
-        ["FPS", "cackle", "meme", "meme", "meme", "meme", "meme", "hah"],
-        ["meme", "FPS"],
-        [8, 9],
+        ["Survival", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS", "FPS"],
+        ["FPS", "meme", "you'll", "never", "take", "meme", "meme", "alive", "meme", "meme"],
+        ["FPS", "cackle", "meme", "meme", "meme", "meme", "meme", "hah", "meme", "meme"],
+        ["FPS", "meme"],
+        [11, 12],
     ),
 ]
 
