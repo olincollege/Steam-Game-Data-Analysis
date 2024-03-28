@@ -2,8 +2,20 @@
 This module compiles gathered data together to analyze and observe.
 """
 
+"""
+This module compiles gathered data together to analyze and observe.
+"""
 
 def convert_csv_to_list(df):
+    """
+    Converts the columns of the CSV file where we store our data to lists.
+
+    Args:
+        df: Pandas data frame containing data from CSV file
+    
+    Return
+        lists containing the values from the columns of the CSV
+    """
     game_name = df["Game Name"].tolist()
     percent_positive = df["Percent Positive Reviews"].tolist()
     number_reviews = df["Number of Reviews"].tolist()
@@ -42,6 +54,17 @@ def number_of_positive_and_negative_reviews(percent_positive, number_reviews):
 
 
 def number_playing_priced_games(prices, peak_player):
+    """
+    Gets the number of positive reviews of all the games.
+
+    Args:
+        percent_positive: list containing integers representing the
+        ratings of all the games number_reviews: list containing 
+        integer with the number of reivews of all the games
+    
+    Return:
+        list containing the number of positive reviews of each game.
+    """
     price_points = {
         "Under 10": 0,
         "10 - 20": 0,
@@ -68,6 +91,20 @@ def number_playing_priced_games(prices, peak_player):
 
 
 def partition(names, values, low, high):
+    """
+    Partitions list based on pivot point and swaps values. The lists values
+    and names are associated with each other in that the indices of values
+    correspond to those of names. 
+
+    Args:
+        names: list with names
+        values: list with values to be sorted
+        low: int that is start index of partition
+        high: int that is end index of partition
+
+    Returns:
+        An int that is the partition in quick_sort.
+    """
     pivot = values[high]
 
     i = low - 1
@@ -86,6 +123,15 @@ def partition(names, values, low, high):
 
 
 def quick_sort(names, values, low, high):
+    """
+    Sorts lists names and values based on the values list using quick sort
+
+    Parameters:
+        names: list with names
+        values: list with values to be sorted
+        low: int that is start index of partition
+        high: int that is end index of partition
+    """
     if low < high:
         pi = partition(names, values, low, high)
         quick_sort(names, values, low, pi - 1)
@@ -93,6 +139,21 @@ def quick_sort(names, values, low, high):
 
 
 def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
+    """
+    Computes how many players are playing the top genres and returns lists for 
+    genres that have more than 500000 players.
+
+    Arg:
+        first_genre: list of all the top first genres of the games
+        second_genre: list of all the top second genres of the games
+        third_genre: list of all the top third genres of the games
+        peak_players: list of peak player numbers of the games
+    
+    Return:
+        Two lists. One of which contains strings that represent the top 
+        genres and the other a list of integers with how popular each genre 
+        is. The lists are ranked in ascending order based on the popularity. 
+    """
     number_playing_genre = {}
 
     length = len(first_genre)
@@ -124,6 +185,20 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
 
 
 def most_common_genres(first_genre, second_genre, third_genre):
+    """
+    Computes how many occurances of each genre among the top 100 games and returns
+    any genre with more than 7 occurances.
+
+    Arg:
+        first_genre: list of all the top first genres of the games
+        second_genre: list of all the top second genres of the games
+        third_genre: list of all the top third genres of the games
+    
+    Return:
+        Two lists. One of which contains strings that represent the top 
+        genres and the other a list of integers with how many occurances of each
+        genre. The lists are ranked in ascending order based on the occurances. 
+    """
     number_of_genre = {}
     length = len(first_genre)
     for index in range(length):
