@@ -6,6 +6,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import analyze_data
 
+# These functions fo not have unit tests because they produce visuals
+
 df = pd.read_csv("steam_data.csv")
 
 (
@@ -19,10 +21,8 @@ df = pd.read_csv("steam_data.csv")
     number_reviews,
 ) = analyze_data.convert_csv_to_list(df)
 
-number_of_positive_reviews = (
-    analyze_data.number_of_positive_reviews(
-        percent_positive, number_reviews
-    )
+number_of_positive_reviews = analyze_data.number_of_positive_reviews(
+    percent_positive, number_reviews
 )
 print(len(number_of_positive_reviews))
 
