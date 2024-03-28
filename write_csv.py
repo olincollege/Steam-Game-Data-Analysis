@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import get_data
 
+# This file does not have unit tests because it has no functions
 
 mostplayed_html = get_data.get_html_from_mostplayed()
 
