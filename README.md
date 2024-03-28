@@ -19,7 +19,10 @@ pytest, and Requests packages. To install these packages run `pip install -r req
 
 We gathered our data about all of the games by web scraping the website 
 `https://store.steampowered.com/charts/mostplayed`. From the HTML that this yeilds, we extract 
-links to all the games on this list and scrape those URLs too. LILY TYPE HERE ABOUT LIMITING REQUESTS.
+links to all the games on this list and scrape those URLs too. 
+
+Steam generously allows for web scraping. We didn't want to overwhelm Steam's servers since we would be 
+running 100 requests to get all our data. So, between each request, we waited 5 seconds.
 
 The fully processed version of the data we collected is in the file `steam_data.csv`. 
     This data is pre-gathered on the date March 28, 2024. 
