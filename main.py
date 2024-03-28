@@ -4,7 +4,7 @@ This module runs all the data analysis functions and creates plots to visualize.
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
+from matplotlib import cm
 import numpy as np
 import analyze_data
 
@@ -34,10 +34,8 @@ price_points, price_points_popularity = (
     analyze_data.number_playing_priced_games(price, peak_players)
 )
 
-genre_most_common, genre_most_common_number = (
-    analyze_data.most_common_genres(
-        first_genre, second_genre, third_genre
-    )
+genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
+    first_genre, second_genre, third_genre
 )
 
 genre_most_popular, genre_most_popular_popularity = (
@@ -54,7 +52,7 @@ genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
 )
 
 
-def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
+def create_bar_plot(x_axis, y_axis, plot_title, labelx, labely):
     """
     Creates a bar plot to compare two quanities/qualities of a game.
 
@@ -94,11 +92,11 @@ def create_scatter_plot(x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-        colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
-        count = 0
-        for c in colors:
+    colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
+    count = 0
+    for c in colors:
         plt.scatter(x_axis[count], y_axis[count], color=c)
-            count += 1
+        count += 1
     plt.title(plot_title)
     plt.xlabel(labelx)
     plt.ylabel(labely)
