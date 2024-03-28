@@ -20,8 +20,8 @@ def get_html_from_mostplayed():
         to be used to find data on each game from the list
     """
 
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=False)
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=False)
         context = browser.new_context(viewport={"width": 1920, "height": 1080})
         page = context.new_page()
         # go to url
@@ -66,7 +66,7 @@ def get_game_links(tbody):
         A list of strings representing links to individual game pages.
     """
 
-    get_link = "https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
+    get_link = r"https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
 
     links = re.findall(get_link, tbody)
     return links

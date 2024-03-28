@@ -3,24 +3,24 @@ This module compiles gathered data together to analyze and observe.
 """
 
 
-def convert_csv_to_list(df):
+def convert_csv_to_list(dataframe):
     """
     Converts the columns of the CSV file where we store our data to lists.
 
     Args:
-        df: Pandas data frame containing data from CSV file
+        dataframe: Pandas data frame containing data from CSV file
 
     Return
         lists containing the values from the columns of the CSV
     """
-    game_name = df["Game Name"].tolist()
-    percent_positive = df["Percent Positive Reviews"].tolist()
-    number_reviews = df["Number of Reviews"].tolist()
-    first_genre = df["First Genre"].tolist()
-    second_genre = df["Second Genre"].tolist()
-    third_genre = df["Third Genre"].tolist()
-    price = df["Price"].tolist()
-    peak_players = df["Peak Number of Players"].tolist()
+    game_name = dataframe["Game Name"].tolist()
+    percent_positive = dataframe["Percent Positive Reviews"].tolist()
+    number_reviews = dataframe["Number of Reviews"].tolist()
+    first_genre = dataframe["First Genre"].tolist()
+    second_genre = dataframe["Second Genre"].tolist()
+    third_genre = dataframe["Third Genre"].tolist()
+    price = dataframe["Price"].tolist()
+    peak_players = dataframe["Peak Number of Players"].tolist()
 
     number_reviews = [sub.replace(",", "") for sub in number_reviews]
     number_reviews = [int(i) for i in number_reviews]
@@ -50,13 +50,13 @@ def number_of_positive_reviews(percent_positive, number_reviews):
     Return:
         list containing the number of positive reviews of each game.
     """
-    number_of_positive_reviews = []
+    num_of_positive_reviews = []
     length = len(percent_positive)
     for i in range(length):
-        number_of_positive_reviews.append(
+        num_of_positive_reviews.append(
             int(number_reviews[i] * percent_positive[i] / 100)
         )
-    return number_of_positive_reviews
+    return num_of_positive_reviews
 
 
 def number_playing_priced_games(prices, peak_player):
@@ -145,9 +145,9 @@ def quick_sort(names, values, low, high):
         high: int that is end index of partition
     """
     if low < high:
-        pi = partition(names, values, low, high)
-        quick_sort(names, values, low, pi - 1)
-        quick_sort(names, values, pi + 1, high)
+        p_index = partition(names, values, low, high)
+        quick_sort(names, values, low, p_index - 1)
+        quick_sort(names, values, p_index + 1, high)
 
 def most_common_genres(first_genre, second_genre, third_genre):
     """

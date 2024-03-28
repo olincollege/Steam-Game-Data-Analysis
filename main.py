@@ -46,9 +46,17 @@ genre_most_popular, genre_most_popular_popularity = (
     )
 )
 
+genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
+    first_genre, second_genre, third_genre
+)
+genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
+    first_genre, second_genre, third_genre
+)
+
+
 def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
     """
-    Creates a plot to compare two quanities/qualities of a game.
+    Creates a bar plot to compare two quanities/qualities of a game.
 
     Args:
         x_axis: The list of game data that is on the x-axis of the plot.
@@ -62,20 +70,36 @@ def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-    if type == "bar":
-        plt.bar(x_axis, y_axis, color="maroon", width=0.4)
-        plt.title(plot_title)
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        plt.xticks(rotation=30)
-        plt.show()
-    if type == "scatter":
+    plt.bar(x_axis, y_axis, color="maroon", width=0.4)
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.xticks(rotation=30)
+    plt.show()
+
+
+def create_scatter_plot(x_axis, y_axis, plot_title, labelx, labely):
+    """
+    Creates a scatter plot to compare two quanities/qualities of a game.
+
+    Args:
+        x_axis: The list of game data that is on the x-axis of the plot.
+                Elements are either strings or ints.
+        y_axis: The list of game data that is on the y-axis of the plot.
+                Elements are either strings or ints.
+        plot_title: A string representing the title of the plot
+        labelx: A string representing the plots x-axis label
+        labely: A string representing the plots y-axis label
+
+    Returns:
+        none
+    """
         colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
         count = 0
         for c in colors:
-            plt.scatter(x_axis[count], y_axis[count], color=c)
+        plt.scatter(x_axis[count], y_axis[count], color=c)
             count += 1
-        plt.title(plot_title)
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        plt.show()
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.show()
