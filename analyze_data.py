@@ -2,9 +2,6 @@
 This module compiles gathered data together to analyze and observe.
 """
 
-"""
-This module compiles gathered data together to analyze and observe.
-"""
 
 def convert_csv_to_list(df):
     """
@@ -12,7 +9,7 @@ def convert_csv_to_list(df):
 
     Args:
         df: Pandas data frame containing data from CSV file
-    
+
     Return
         lists containing the values from the columns of the CSV
     """
@@ -59,9 +56,9 @@ def number_playing_priced_games(prices, peak_player):
 
     Args:
         percent_positive: list containing integers representing the
-        ratings of all the games number_reviews: list containing 
+        ratings of all the games number_reviews: list containing
         integer with the number of reivews of all the games
-    
+
     Return:
         list containing the number of positive reviews of each game.
     """
@@ -94,7 +91,7 @@ def partition(names, values, low, high):
     """
     Partitions list based on pivot point and swaps values. The lists values
     and names are associated with each other in that the indices of values
-    correspond to those of names. 
+    correspond to those of names.
 
     Args:
         names: list with names
@@ -140,7 +137,7 @@ def quick_sort(names, values, low, high):
 
 def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     """
-    Computes how many players are playing the top genres and returns lists for 
+    Computes how many players are playing the top genres and returns lists for
     genres that have more than 500000 players.
 
     Arg:
@@ -148,11 +145,11 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
         second_genre: list of all the top second genres of the games
         third_genre: list of all the top third genres of the games
         peak_players: list of peak player numbers of the games
-    
+
     Return:
-        Two lists. One of which contains strings that represent the top 
-        genres and the other a list of integers with how popular each genre 
-        is. The lists are ranked in ascending order based on the popularity. 
+        Two lists. One of which contains strings that represent the top
+        genres and the other a list of integers with how popular each genre
+        is. The lists are ranked in ascending order based on the popularity.
     """
     number_playing_genre = {}
 
@@ -193,11 +190,11 @@ def most_common_genres(first_genre, second_genre, third_genre):
         first_genre: list of all the top first genres of the games
         second_genre: list of all the top second genres of the games
         third_genre: list of all the top third genres of the games
-    
+
     Return:
-        Two lists. One of which contains strings that represent the top 
+        Two lists. One of which contains strings that represent the top
         genres and the other a list of integers with how many occurances of each
-        genre. The lists are ranked in ascending order based on the occurances. 
+        genre. The lists are ranked in ascending order based on the occurances.
     """
     number_of_genre = {}
     length = len(first_genre)
