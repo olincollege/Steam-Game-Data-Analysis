@@ -47,9 +47,9 @@ genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
 )
 
 
-def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
+def create_bar_plot(x_axis, y_axis, plot_title, labelx, labely):
     """
-    Creates a plot to compare two quanities/qualities of a game.
+    Creates a bar plot to compare two quanities/qualities of a game.
 
     Args:
         x_axis: The list of game data that is on the x-axis of the plot.
@@ -63,16 +63,32 @@ def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-    if type == "bar":
-        plt.bar(x_axis, y_axis, color="maroon", width=0.4)
-        plt.title(plot_title)
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        plt.xticks(rotation=30)
-        plt.show()
-    if type == "scatter":
-        plt.scatter(x_axis, y_axis)
-        plt.title(plot_title)
-        plt.xlabel(labelx)
-        plt.ylabel(labely)
-        plt.show()
+    plt.bar(x_axis, y_axis, color="maroon", width=0.4)
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.xticks(rotation=30)
+    plt.show()
+
+
+def create_scatter_plot(x_axis, y_axis, plot_title, labelx, labely):
+    """
+    Creates a scatter plot to compare two quanities/qualities of a game.
+
+    Args:
+        x_axis: The list of game data that is on the x-axis of the plot.
+                Elements are either strings or ints.
+        y_axis: The list of game data that is on the y-axis of the plot.
+                Elements are either strings or ints.
+        plot_title: A string representing the title of the plot
+        labelx: A string representing the plots x-axis label
+        labely: A string representing the plots y-axis label
+
+    Returns:
+        none
+    """
+    plt.scatter(x_axis, y_axis)
+    plt.title(plot_title)
+    plt.xlabel(labelx)
+    plt.ylabel(labely)
+    plt.show()
