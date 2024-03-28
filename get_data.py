@@ -66,7 +66,7 @@ def get_game_links(tbody):
         A list of strings representing links to individual game pages.
     """
 
-    get_link = r"https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
+    get_link = "https:\/\/store\.steampowered\.com\/app\/[^?]*\?"
 
     links = re.findall(get_link, tbody)
     return links
@@ -166,7 +166,6 @@ def get_reviews(soup):
 
     percentage = ""
     num_reviews = ""
-
     # get the percentage of positive reviews
     if review.find("-") != -1:
         i = review.find("-") + 1
@@ -179,9 +178,7 @@ def get_reviews(soup):
         while j < review.find("userreviews"):
             num_reviews += review[j]
             j += 1
-
     return percentage, num_reviews
-
 
 def get_game_genre(soup):
     """

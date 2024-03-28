@@ -54,7 +54,7 @@ genre_most_common, genre_most_common_number = analyze_data.most_common_genres(
 )
 
 
-def create_plot(type, x_axis, y_axis, plot_title, labelx, labely):
+def create_bar_plot(x_axis, y_axis, plot_title, labelx, labely):
     """
     Creates a bar plot to compare two quanities/qualities of a game.
 
@@ -94,11 +94,11 @@ def create_scatter_plot(x_axis, y_axis, plot_title, labelx, labely):
     Returns:
         none
     """
-        colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
-        count = 0
-        for c in colors:
+    colors = cm.rainbow(np.linspace(0, 1, len(x_axis)))
+    count = 0
+    for c in colors:
         plt.scatter(x_axis[count], y_axis[count], color=c)
-            count += 1
+        count += 1
     plt.title(plot_title)
     plt.xlabel(labelx)
     plt.ylabel(labely)

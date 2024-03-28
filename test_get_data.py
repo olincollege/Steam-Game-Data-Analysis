@@ -1,15 +1,12 @@
 """
 This module runs unit test
 """
-
 import pytest
 import pandas as pd
-from bs4 import BeautifulSoup
 
-from get_data import get_game_links, get_name, get_price_and_peak
+from get_data import get_game_links, get_name
 
 df = pd.read_csv("steam_data.csv")
-
 # Define sets of test cases.
 
 
@@ -46,14 +43,20 @@ get_names_cases = [
 
 get_price_and_peak_cases = [
     # Check that a game that is free has a price of 0
-    # Check that peak players gets returned properly
-    ("<tr hello>Free to Play</tr>", 0.0),
-    # Check a game with a numbered price and tbody with
-    # other stuff returns properly
+    ("CounterStrike_2", 0.0),
+    # Check a game with a price under 10
+    ("Wallpaper_Engine", 3.99),
+    # Check a game with a price under 20
+    ("Stardew_Valley", 14.99),
+    # Check a game with a price under 30
+    ("Palworld", 29.99),
+    # Check a game with a price under 40
+    ("HELLDIVERS_2", 39.99),
+    # Check a game with a price under 50
+    ("DayZ", 44.99),
+    # Check a game with a price above 50
+    ("Baldurs_Gate_3", 59.99),
 ]
-
-get_reviews_cases = []
-
 
 # Define standard testing functions to check functions' outputs given certain
 # inputs defined above.
@@ -90,9 +93,9 @@ def test_get_name(link, name_exp):
 
 
 @pytest.mark.parametrize(
-    "game_name,price_exp,peak_exp", get_price_and_peak_cases
+    "game_name,price_exp", get_price_and_peak_cases
 )
-def test_get_price_and_peak(game_name, price_exp, peak_exp):
+def test_get_price_and_peak(game_name, price_exp):
     """
     Test that the price and peak data in the csv file (acquired from
     running get_price_and_peak) is the expected result.
@@ -102,11 +105,14 @@ def test_get_price_and_peak(game_name, price_exp, peak_exp):
         price_exp: A float representing the expected price
         peak_exp: An int representing the expected peak players
     """
-    row_index = df.index[df["Game Name"] == game_name].tolist()[0]
-    price_result = df.loc[row_index]["Price"]
     # Test that each are the correct data type, peak is changing every 24 hours
     # so we can't check expected peak value
-    assert price_result == price_exp
+
+    index = df[df["Game Name"] == game_name].index
+    price_csv = df["Price"].values[index]
+    peak_csv = df["Peak Number of Players"].values[index]
+    assert (price_csv)[0] == price_exp
+    assert peak_csv[0] > 0
 
 
 def test_get_reviews():
@@ -135,3 +141,4 @@ def test_get_game_genre():
         assert isinstance(genre2, str)
     for genre3 in df["Third Genre"]:
         assert isinstance(genre3, str)
+        
