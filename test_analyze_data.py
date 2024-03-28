@@ -75,7 +75,7 @@ most_popular_genres_cases = [
 most_common_genres_cases = [
     # Check that empty genre lists returns empty rankings
     ([], [], [], [], []),
-    # Check that genres occuring less than 7 times are excluded
+    # Check that genres occuring less than 10 times are excluded
     (
         ["Survival", "FPS"],
         ["FPS", "Shooter"],
