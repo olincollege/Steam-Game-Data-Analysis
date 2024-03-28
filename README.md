@@ -12,7 +12,8 @@ and peak players in the last 24 hours.
 
 ## Dependencies
 
-For acquiring and compiling data into a file, we used the WRITE HERE LILY packages.
+For acquiring and compiling data into a file, we used the beautifulsoup4, matplotlib, pandas, playwright,
+pytest, and Requests packages. To install these packages run `pip install -r requirements.txt` in your terminal.
 
 ## Data Collection
 

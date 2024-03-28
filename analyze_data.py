@@ -93,7 +93,6 @@ def number_playing_priced_games(prices, peak_player):
             price_points["50+"] += peak_player[i]
     return list(price_points.keys()), list(price_points.values())
 
-
 def partition(names, values, low, high):
     """
     Partitions list based on pivot point and swaps values. The lists values
@@ -150,6 +149,49 @@ def quick_sort(names, values, low, high):
         quick_sort(names, values, low, p_index - 1)
         quick_sort(names, values, p_index + 1, high)
 
+def most_common_genres(first_genre, second_genre, third_genre):
+    """
+    Computes how many occurances of each genre among the top 100 games and returns
+    any genre with more than 7 occurances.
+
+    Arg:
+        first_genre: list of all the top first genres of the games
+        second_genre: list of all the top second genres of the games
+        third_genre: list of all the top third genres of the games
+    
+    Return:
+        Two lists. One of which contains strings that represent the top 
+        genres and the other a list of integers with how many occurances of each
+        genre. The lists are ranked in ascending order based on the occurances. 
+    """
+    number_of_genre = {}
+    length = len(first_genre)
+    for index in range(length):
+        first = first_genre[index]
+        second = second_genre[index]
+        third = third_genre[index]
+        if first not in number_of_genre:
+            number_of_genre[first] = 1
+        else:
+            number_of_genre[first] += 1
+        if second not in number_of_genre:
+            number_of_genre[second] = 1
+        else:
+            number_of_genre[second] += 1
+        if third not in number_of_genre:
+            number_of_genre[third] = 1
+        else:
+            number_of_genre[third] += 1
+
+    number_of_genre = {
+        key: val for key, val in number_of_genre.items() if val > 10
+    }
+
+    genre = list(number_of_genre.keys())
+    number = list(number_of_genre.values())
+    quick_sort(genre, number, 0, len(genre) - 1)
+    return genre, number
+
 
 def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     """
@@ -199,47 +241,3 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     popularity = list(number_playing_genre.values())
     quick_sort(genre, popularity, 0, len(genre) - 1)
     return genre, popularity
-
-
-def most_common_genres(first_genre, second_genre, third_genre):
-    """
-    Computes how many occurances of each genre among the top 100 games and
-    returns any genre with more than 7 occurances.
-
-    Arg:
-        first_genre: list of all the top first genres of the games
-        second_genre: list of all the top second genres of the games
-        third_genre: list of all the top third genres of the games
-
-    Return:
-        Two lists. One of which contains strings that represent the top
-        genres and the other a list of integers with how many occurances of each
-        genre. The lists are ranked in ascending order based on the occurances.
-    """
-    number_of_genre = {}
-    length = len(first_genre)
-    for index in range(length):
-        first = first_genre[index]
-        second = second_genre[index]
-        third = third_genre[index]
-        if first not in number_of_genre:
-            number_of_genre[first] = 1
-        else:
-            number_of_genre[first] += 1
-        if second not in number_of_genre:
-            number_of_genre[second] = 1
-        else:
-            number_of_genre[second] += 1
-        if third not in number_of_genre:
-            number_of_genre[third] = 1
-        else:
-            number_of_genre[third] += 1
-
-    number_of_genre = {
-        key: val for key, val in number_of_genre.items() if val > 7
-    }
-
-    genre = list(number_of_genre.keys())
-    number = list(number_of_genre.values())
-    quick_sort(genre, number, 0, len(genre) - 1)
-    return genre, number
