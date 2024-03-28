@@ -66,7 +66,8 @@ def number_playing_priced_games(prices, peak_player):
 
     Args:
         prices: list containing floats of prices of each games
-        peak_players: list containing ints of number of peak players of each game
+        peak_players: list containing ints of number of peak players of
+        each game
     """
     price_points = {
         "Under 10": 0,
@@ -85,7 +86,7 @@ def number_playing_priced_games(prices, peak_player):
         elif prices[i] < 30:
             price_points["20 - 30"] += peak_player[i]
         elif prices[i] < 40:
-            price_points["40 - 50"] += peak_player[i]
+            price_points["30 - 40"] += peak_player[i]
         elif prices[i] < 50:
             price_points["40 - 50"] += peak_player[i]
         else:
@@ -110,19 +111,28 @@ def partition(names, values, low, high):
     """
     pivot = values[high]
 
-    i = low - 1
+    partition_idx = low - 1
 
     for j in range(low, high):
         if values[j] <= pivot:
-            i = i + 1
+            partition_idx = partition_idx + 1
 
-            (names[i], names[j]) = (names[j], names[i])
-            (values[i], values[j]) = (values[j], values[i])
+            (names[partition_idx], names[j]) = (names[j], names[partition_idx])
+            (values[partition_idx], values[j]) = (
+                values[j],
+                values[partition_idx],
+            )
 
-    (names[i + 1], names[high]) = (names[high], names[i + 1])
-    (values[i + 1], values[high]) = (values[high], values[i + 1])
+    (names[partition_idx + 1], names[high]) = (
+        names[high],
+        names[partition_idx + 1],
+    )
+    (values[partition_idx + 1], values[high]) = (
+        values[high],
+        values[partition_idx + 1],
+    )
 
-    return i + 1
+    return partition_idx + 1
 
 
 def quick_sort(names, values, low, high):
@@ -147,10 +157,14 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
     genres that have more than 500000 players.
 
     Arg:
-        first_genre: list containing strings of all the top first genres of the games
-        second_genre: list containing strings of all the top second genres of the games
-        third_genre: list containing strings of all the top third genres of the games
-        peak_players: list containing strings of peak player numbers of the games
+        first_genre: list containing strings of all the top first genres of
+        the games
+        second_genre: list containing strings of all the top second genres of
+        the games
+        third_genre: list containing strings of all the top third genres of
+        the games
+        peak_players: list containing strings of peak player numbers of the
+        games
 
     Return:
         Two lists. One of which contains strings that represent the top
@@ -189,8 +203,8 @@ def most_popular_genres(first_genre, second_genre, third_genre, peak_players):
 
 def most_common_genres(first_genre, second_genre, third_genre):
     """
-    Computes how many occurances of each genre among the top 100 games and returns
-    any genre with more than 7 occurances.
+    Computes how many occurances of each genre among the top 100 games and
+    returns any genre with more than 7 occurances.
 
     Arg:
         first_genre: list of all the top first genres of the games
