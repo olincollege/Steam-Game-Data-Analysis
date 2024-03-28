@@ -20,7 +20,7 @@ df = pd.read_csv("steam_data.csv")
 ) = analyze_data.convert_csv_to_list(df)
 
 number_of_positive_reviews = (
-    analyze_data.number_of_positive_and_negative_reviews(
+    analyze_data.number_of_positive_reviews(
         percent_positive, number_reviews
     )
 )
